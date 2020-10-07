@@ -1,0 +1,17 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = tab
+
+[*.{js,css}]
+indent_style = space
+indent_size = 4
+
+[*.{vue,html,gql}]
+indent_style = space
+indent_size = 2
+
+[{package,package-lock}.json]
+indent_style = space
+indent_size = 2
