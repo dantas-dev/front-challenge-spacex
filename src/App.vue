@@ -6,12 +6,12 @@
 
 <style>
 @import "./styles/reset.css";
+@import "./styles/variables.css";
 
 #app {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  width: 100%;
   min-width: 100%;
-  height: 100vh;
   min-height: 100vh;
+  background-color: whitesmoke;
 }
 </style>

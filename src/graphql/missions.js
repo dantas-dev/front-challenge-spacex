@@ -2,7 +2,7 @@ import { gql } from "apollo-boost";
 
 export const get_missions = gql`
     query missions($limit: Int!) {
-        launches(limit: $limit) {
+        launchesPast(limit: $limit) {
             details
             mission_name
             mission_id

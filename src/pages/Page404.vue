@@ -15,15 +15,17 @@ export default {
 
 <style scoped>
 .page-container {
-  height: 100%;
+  height: 100vh;
   display: grid;
   place-items: center;
   align-content: center;
 }
 
+h1 {
+  color: var(--black);
+}
+
 button {
-  --black: rgba(0, 0, 0, 0.8);
-  --white: rgba(230, 230, 230);
   font-size: 1.1rem;
   padding: 10px 30px;
   margin-top: 30px;
