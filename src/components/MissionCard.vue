@@ -1,7 +1,9 @@
 <template>
-  <article class="card-container" @click="$emit('click')">
+  <article class="card-container" @click="$emit('click', mission)">
     <h2 class="card-title">{{ mission.name }}</h2>
-    <p class="card-description">{{ mission.description }}</p>
+    <p class="card-description">
+      {{ mission.description.slice(0, 125) + "..." }}
+    </p>
     <p class="card-date">{{ mission.date }}</p>
   </article>
 </template>

@@ -25,11 +25,12 @@
             :key="index"
             :mission="{
               name: launch.mission_name,
+              media: launch.links,
+              date: get_date(launch.launch_date_utc),
               description:
-                get_description(launch.details) ||
-                `This is the ${launch.mission_name} mission...`,
-              date: get_date(launch.launch_date_utc)
+                launch.details || `This is the ${launch.mission_name} mission.`
             }"
+            @click="mission_selected"
           />
         </div>
 
@@ -69,15 +70,15 @@ export default {
   },
 
   methods: {
-    get_description(text) {
-      return text ? `${text.slice(0, 125)}...` : null;
-    },
-
     get_date(date_arg) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       const date = new Date(date_arg);
 
       return date.toLocaleDateString("pt-br", { ...options, month: "numeric" });
+    },
+
+    mission_selected(mission) {
+      this.$router.push({ name: "Mission", params: { mission } });
     }
   }
 };
