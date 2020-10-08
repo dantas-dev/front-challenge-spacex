@@ -4,6 +4,8 @@ O Missions SpaceX é uma central de notícias das últimas missões da SpaceX.
 
 Esse projeto foi desenvolvido baseado no [desafio front-end da SolarView](docs/DESAFIO.md).
 
+Para saber sobre as decisões tomadas do projeto acesse [INSTRUCTIONS](docs/INSTRUCTIONS.md).
+
 ## Tecnologias utilizadas
 
 * [Vue](https://vuejs.org/)
