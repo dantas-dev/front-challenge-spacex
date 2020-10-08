@@ -13,6 +13,8 @@ Para saber sobre as decisões tomadas do projeto acesse [INSTRUCTIONS](docs/INST
 
 ## Usando o APP
 
+Para usar online acesse o link: https://rarysson.github.io/front-challenge-spacex/
+
 Para usar localmente, clone o repositório, vá na pasta criada e execute os comandos:
 
 ```
