@@ -1,0 +1,24 @@
+.card-container {
+    min-width: 250px;
+    max-width: 500px;
+    height: 150px;
+    padding: 15px 15px 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid gray;
+    background-color: burlywood;
+}
+
+.card-title {
+    font-size: min(5vw, 1.3rem);
+    color: var(--black);
+}
+
+.card-description {
+    font-size: min(4vw, 1.05rem);
+}
+
+.card-date {
+    align-self: flex-end;
+}
