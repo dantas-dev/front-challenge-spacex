@@ -16,7 +16,7 @@ export const CardBlock = styled.div`
   flex-direction: column;
   color: whitesmoke;
   padding: 2rem;
-  margin: 4rem;
+  margin: 1rem;
   cursor: text;
   border-radius: 26px;
   background: linear-gradient(315deg, #1f272f, #293033);
