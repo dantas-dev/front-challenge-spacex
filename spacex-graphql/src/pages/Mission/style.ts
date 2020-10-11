@@ -10,8 +10,6 @@ export const Container = styled.div`
 export const CardBlock = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   color: whitesmoke;
   padding: 1rem;
   cursor: text;
@@ -29,6 +27,7 @@ export const CardBlock = styled.div`
   h2 {
     font-size: 1rem;
     font-weight: 400;
+    align-self: flex-start;
     &::selection {
       background-color: red;
     }
