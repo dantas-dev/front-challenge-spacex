@@ -2,21 +2,18 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  flex-wrap: wrap;
-
   justify-content: center;
   align-items: center;
-
+  padding: 0 1rem;
   height: 100vh;
-  margin: 0 3rem;
 `;
 export const CardBlock = styled.div`
   display: flex;
-
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: whitesmoke;
-  padding: 2rem;
-  margin: 4rem;
+  padding: 1rem;
   cursor: text;
   border-radius: 26px;
   background: linear-gradient(315deg, #1f272f, #293033);
@@ -46,6 +43,16 @@ export const CardBlock = styled.div`
     color: red;
     &:hover {
       box-shadow: inset 0px -1px 1px 0px whitesmoke;
+    }
+  }
+  @media (max-width: 680px) {
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    h2,
+    a {
+      font-size: 0.8rem;
     }
   }
 `;

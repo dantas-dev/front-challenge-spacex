@@ -19,6 +19,7 @@ export const CardBlock = styled.div`
   border-radius: 26px;
   background: linear-gradient(315deg, #1f272f, #293033);
   box-shadow: -9px -9px 12px #363b3e, 9px 9px 12px #464d50;
+  max-height: 70%;
 
   h1 {
     font-size: 1.6rem;
@@ -43,6 +44,16 @@ export const CardBlock = styled.div`
     padding: 10px;
     &:hover {
       box-shadow: inset 0px -1px 1px 0px whitesmoke;
+    }
+  }
+  @media (max-width: 680px) {
+    h1 {
+      font-size: 1.2rem;
+    }
+
+    h2,
+    a {
+      font-size: 0.8rem;
     }
   }
 `;
