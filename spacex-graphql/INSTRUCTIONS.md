@@ -1,6 +1,6 @@
 # Setup instructions
 
-### Application is live in [SpaceX Graphql](<(https://spacex-challenge.netlify.app/)>)
+### Application is live in [SpaceX Graphql](https://spacex-challenge.netlify.app/)
 
 <img src="./assets/DashBoard.png" style="background-size: cover;">
 <img src="./assets/Mission.png" style="background-size: cover;">
