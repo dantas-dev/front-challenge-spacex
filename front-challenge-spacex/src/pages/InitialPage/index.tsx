@@ -1,7 +1,6 @@
 import { gql, useQuery } from '@apollo/client';
 import moment from 'moment';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import {
   Container,
   DateMission,
@@ -18,6 +17,9 @@ interface MissionInitial {
   id: string;
   launch_site: {
     site_name_long: string;
+  };
+  ships: {
+    image: string;
   };
 }
 
@@ -54,7 +56,7 @@ const InitialPage: React.FC = () => {
       {data?.launchesPast.map(
         ({ id, mission_name, launch_site, launch_date_local }) => (
           <>
-            <Link to={`/details/${id}`}>
+            <a href={`/details/${id}`}>
               <Items key={id}>
                 <TitleMission>
                   Mission
@@ -68,7 +70,7 @@ const InitialPage: React.FC = () => {
                   {moment(launch_date_local).format('DD/MM/YYYY HH:mm')}
                 </DateMission>
               </Items>
-            </Link>
+            </a>
           </>
         ),
       )}
