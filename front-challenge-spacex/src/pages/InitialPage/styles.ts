@@ -11,6 +11,10 @@ export const TitleMission = styled.h1`
   font-size: 1.3rem;
   margin: 0;
   align-self: flex-start;
+
+  @media (max-width: 680px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const SpanName = styled.span`
@@ -47,10 +51,4 @@ export const Items = styled.div`
     rgba(40, 40, 70, 1) 97%
   );
   max-height: 70%;
-
-  @media (max-width: 680px) {
-    h1 {
-      font-size: 1.2rem;
-    }
-  }
 `;

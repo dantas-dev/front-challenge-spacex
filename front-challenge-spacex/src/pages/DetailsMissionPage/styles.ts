@@ -6,11 +6,19 @@ export const Container = styled.div`
   flex: 1;
   padding: 100px;
   color: #565656;
+
+  @media (max-width: 680px) {
+    padding: 0;
+  }
 `;
 
 export const Content = styled.div`
   margin: 0 auto;
   width: 50%;
+
+  @media (max-width: 680px) {
+    width: 100%;
+  }
 `;
 
 export const Card = styled.div`
@@ -27,6 +35,10 @@ export const MissionName = styled.h1`
   font-size: 1.6rem;
   text-align: center;
   margin: 10px;
+
+  @media (max-width: 680px) {
+    font-size: 1.1rem;
+  }
 `;
 
 export const ItemDescription = styled.div`
@@ -34,6 +46,10 @@ export const ItemDescription = styled.div`
   font-weight: 600;
   padding: 10px;
   line-height: 2;
+
+  @media (max-width: 680px) {
+    font-size: 0.9rem;
+  }
 `;
 
 export const Button = styled.button`

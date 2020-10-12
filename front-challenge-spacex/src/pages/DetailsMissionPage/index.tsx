@@ -65,7 +65,6 @@ const DetailsMissionPage: React.FC = () => {
 
   if (error) return <p> ...Error</p>;
 
-  console.log(data?.launch.ships);
   return (
     <Container key={id}>
       <Content>
