@@ -99,6 +99,7 @@ export default function LandingPage() {
 		: data.launchesPast.map(({ mission_name, details, links, launch_date_local, id }) => (
 				<Grid
 					item
+					key={mission_name}
 					component={Link}
 					variant="contained"
 					to={`/mission/${id}`}

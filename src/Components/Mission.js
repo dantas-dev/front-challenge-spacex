@@ -105,7 +105,14 @@ export default () => {
 
 				if (window.location.href.endsWith(`mission/${id}`)) {
 					return (
-						<Grid item container direction="column" alignItems="center" justify="center">
+						<Grid
+							item
+							container
+							key={`mission ${id}`}
+							direction="column"
+							alignItems="center"
+							justify="center"
+						>
 							<Grid
 								item
 								container
@@ -148,6 +155,7 @@ export default () => {
 								<Grid item container justify="center">
 									{links.flickr_images.map((index, currElement) => (
 										<img
+											key={currElement}
 											src={links.flickr_images[currElement]}
 											alt={mission_name}
 											className={classes.missionImage}
