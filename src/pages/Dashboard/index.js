@@ -30,7 +30,7 @@ function Dashboard() {
       <Container>
         {
           data.launchesPast.map(launch => (
-            <Card to={`/mission/${launch.id}`}>
+            <Card key={launch.id} to={`/mission/${launch.id}`}>
               <h1>{launch.mission_name}</h1>
               <p>{launch.details}</p>
               <p>{launch.launch_date_local.slice(0, 10)}</p>
