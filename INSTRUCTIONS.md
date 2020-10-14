@@ -25,7 +25,7 @@ Apollo Client
 
 Utilizei dentro da aplicação o Apollo Client para comunicação com a API da SpaceX Graphql, além de ser a  melhor e mais utilizadas opção para comunicação com a API Graphql, é possível utilizar em conjunto com os React Hooks para facilitar a implementação dentro do código e desestruturação dos dados, para ser renderizado dentro do front-end.
 
-## Melhoras na aplicação
+## Melhorias na aplicação
 
 Com um pouco mais de tempo para trabalhar na aplicação, seria possível melhorar o design do layout. Adicionando uma tela para 404 e uma tela para loading enquanto a nossa aplicação carrega os dados da API. </br>
 
