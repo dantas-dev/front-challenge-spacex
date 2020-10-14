@@ -9,21 +9,21 @@ What would you do differently if you were allocated more time
 
 ## Instalação
 
-**Clonando este repositório**
+**Clonando este repositório** </br>
 $ git clone https://github.com/LuisSouza01/front-challenge-spacex && cd front-challenge-spacex
 
-**Instalando dependências**
+**Instalando dependências** </br>
 $ yarn
 
-**Rodando aplicação**
+**Rodando aplicação** </br>
 $ yarn start
 
-## Tecnologias utilizadas
+## Tecnologias utilizadas </br>
 
-ReactJS
-React Router
-Styled Components
-GraphQL
+ReactJS </br>
+React Router </br>
+Styled Components </br>
+GraphQL </br>
 Apollo Client
 
 ## Escolha das tecnologias
