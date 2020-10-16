@@ -1,0 +1,30 @@
+:root {
+  --color-primary: #347FC4;
+  --color-background: #272838;
+  --color-background-light: #5D536B;
+  --color-background-lighter: #7D6B91;
+  --color-text: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+body,
+button {
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a {
+  color: var(--color-text);
+  text-decoration: none;
+}
