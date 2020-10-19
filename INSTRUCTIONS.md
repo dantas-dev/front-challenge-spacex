@@ -1,37 +1,67 @@
+
 # 🚀 Front-End challenge - Graphql API SpaceX
-This is a quick coding challenge we designed to assess your qualifications as a potential front-end developer. It's important to note that this is by no means a test. We just want to get a sense of how you write code and solve problems.
+
+
+The SpaceX Missions is a project of an news dashboard of the most recent SpaceX space missions.
+This project was developed based on the SolarView front-end challenge.
 
 ## Getting started
-To get started with this challenge: 
-1) Fork this repository.
-2) Create a branch with the name: ``yourlevel-yourname``, example: ``JR-joaosilva``
-3) When you finish, make a pull request with name ``yourname``, example ``João Silva`` and add a tag with your level (JR/PL/SR).
 
-## The Challenge
-We'll be looking for **simple, well-designed and tested(only PL/SR)** code in the submission.
+To setup this project
 
-Please include a ``INSTRUCTIONS.md``:
-- Add prints of your application in the repository and use them in the readme
-- Setup instructions
-- How did you decide which technologies to use as part of your solution
-- Are there any improvements you could make to your submission
-- What would you do differently if you were allocated more time
+1) Clone this repository in your machine
 
-## Details
-Use the [SpaceX Graphql API](https://api.spacex.land/graphql/) and create a project based on this [wireframe](https://bit.ly/2SwvPSP). Use your creativity to choose colors etc...
+2) Run the following commands:
 
-### Routes
-#### Dashboard
-- List the last 10 missions
-- Clicking on the card, goes to the **Mission** route
+```
 
-#### Mission
-- Details of the mission (image, etc...)
-- Button to external link
+npm install
 
-## Required
-- Vue or React or Angular
-- TDD (only PL/SR)
+npm run serve
 
-## Desirable
-- Vue using apollo client
+```
+
+3) Visit [localhost:8080](http://localhost:8080/)
+
+
+## Dashboard page
+
+![Dashboard Page](https://i.imgur.com/UBgvWiQ.png)
+
+## Mission Details page
+
+![Dashboard Page](https://i.imgur.com/tsP9BMf.png)
+
+## Loading Missions
+
+![Loading](https://i.imgur.com/KU0dOYt.png)
+
+
+## About the tecnologies used
+
+ - **Vue.js**
+
+I've already been using Vue.js on my actual intern job for the last 7 months, so it was an good choice for an easy to work and agile framework for such a simple application. 
+Vue 3.0 CLI is also an pretty fast-setup environment, with vue-router and eslint+babel setups.
+
+ - **Vue apollo**
+
+This was my first time pairing Vue.js with Graphql, and, besides the challenge itself prefering the use of the Apollo client, i've found that it is the most easy to work Graphql +Vue.js implementation so far.
+
+## What could i improve?
+
+  A lot!
+Ive done the challenge in nearly 3 hours of coding ( and half of that was understanding Apollo itself, since i've never used it ).
+
+But mostly, definetely adding **Testing** to the application is an top-priority.
+And of course, **layout-wise** im not that proud yet of the result, but since it was supposed to be an fast-built app, ive focused on that idea!
+
+## If i have more time, what would ive done?
+
+I would sharpen the layout and css, probably using SASS to help on the scalability of the project.
+Also, the GraphQL SpaceX API is pretty impressive, with a lot of data, so theres almost infinite ways to add 
+new features. Probably adding that in-depth mission details, with a lot of data using the mission ID.
+
+Development-wise, i would focus on some **testing** and also learning **better practices of GraphQL**, since i've never used it professionally.
+
+
