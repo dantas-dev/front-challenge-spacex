@@ -1,0 +1,57 @@
+.App-container {
+  background: #44475aff;
+  box-sizing: border-box;
+  color: #f8f8f2ff;
+  margin: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  padding: 0;
+}
+
+.header-container {
+  background: linear-gradient(0deg, #cecece 5%, #f8f8f2ff 40%);
+  border-bottom: 5px solid #282a36ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-container img {
+  align-self: center;
+  margin: 20px 0 30px;
+  width: 450px;
+}
+
+.missions-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.missions-title {
+  font-size: 40px;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.missions-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*
+
+SCSS HEX
+$raisin-black: #282a36ff;
+$independence: #44475aff;
+$baby-powder: #f8f8f2ff;
+$blue-yonder: #6272a4ff;
+$sky-blue-crayola: #8be9fdff;
+$spring-green: #50fa7bff;
+$mellow-apricot: #ffb86cff;
+$key-lime: #f1fa8cff;
+$tart-orange: #ff5555ff;
+$lavender-floral: #bd93f9ff;
+$pink: #ff79c6;
+
+*/
