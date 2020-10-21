@@ -7,7 +7,14 @@ const routes = [
   {
     path: '/',
     name: 'Dashboard',
-    component: () => import('@/views/Dashboard.vue')
+    component: () => import('@/views/Dashboard.vue'),
+    children: [
+      {
+        path: '',
+        name: 'MissaoAtiva',
+        component: () => import('@/views/MissaoAtiva.vue'),
+      },
+    ]
   }
 ]
 

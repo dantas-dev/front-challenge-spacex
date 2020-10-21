@@ -24,13 +24,11 @@ Responsive Layout
 * Sass
 * JavaScript
 
-Usually I use Routes and Vuex in my projects, but I decided to keep the project as simple as possible.
 I like to use Vuetify for styling and to speed up development on my projects, however I dont have any problem learning and working with other libraries.
 
 This was the first time I worked with GraphQL and I really liked it. I intend to study it more and go deeper into it.
 
 ## Improvements
-Depending on the demand and growth of the project, I would choose to use routing and state control with Vuex. 
 I would also like to style the project more, I am very perfectionist and I really enjoy beautiful interfaces.
 I would also implement tests, which I am studying at the moment, but I still don’t have confidence to use them yet.
 

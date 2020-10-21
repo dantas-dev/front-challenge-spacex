@@ -3,7 +3,7 @@
     class="pa-2 ma-2"
     outlined
     hover
-    @click="$emit('target',mission)"
+    @click="changeMission(mission)"
   >
     <v-card-title>
       {{mission.mission_name}}
@@ -18,6 +18,7 @@
 </template>
 
 <script>
+  import { mapActions } from 'vuex'
 export default {
   name: "MissionItem",
 
@@ -27,7 +28,9 @@ export default {
       required: true,
     },
   },
-  data: () => ({}),
+  methods: {
+    ...mapActions({ changeMission: 'changeMission' }),
+  },
   filters: {
     converteData(data){
       data = data.toString();

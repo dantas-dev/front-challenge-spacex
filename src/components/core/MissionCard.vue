@@ -5,14 +5,14 @@
       height="400"
       hide-delimiter-background
       show-arrows-on-hover
-      v-if="mission.id && mission.links.flickr_images.length > 0"
+      v-if="missionExpanded.id && missionExpanded.links.flickr_images.length > 0"
     >
       <v-carousel-item
-        v-for="(slide, i) in mission.links.flickr_images"
+        v-for="(slide, i) in missionExpanded.links.flickr_images"
         :key="i"
         :src="slide"
       >
-      <v-btn icon fab absolute right @click="$emit('clearTarget')"><v-icon>mdi-close</v-icon></v-btn>
+      <v-btn icon fab absolute right @click="changeMission({})"><v-icon>mdi-close</v-icon></v-btn>
       </v-carousel-item>
     </v-carousel>
     <v-img
@@ -20,32 +20,29 @@
         height="400"
         v-else
         
-    ><v-btn icon fab absolute right @click="$emit('clearTarget')"><v-icon>mdi-close</v-icon></v-btn></v-img>
+    ><v-btn icon fab absolute right @click="changeMission({})"><v-icon>mdi-close</v-icon></v-btn></v-img>
   <v-card-title class="justify-center">
-   {{mission.mission_name}}
+   {{missionExpanded.mission_name}}
   </v-card-title>
   <v-card-text>
-     <span>{{mission.details}}</span>
+     <span>{{missionExpanded.details}}</span>
   </v-card-text>
      <div class="text-center pa-4"><v-btn color="secondary" class="fl" :href="link">See more</v-btn></div>
   </v-card>
 </template>:src="item.src"
 
 <script>
+  import { mapActions, mapGetters } from 'vuex'
   export default {
     name: 'MissionCard',
-    props: {
-      mission: {
-        type: Object,
-        default: () => ({})
-      },
-    },
-    data: () => ({
-    }),
     computed: {
+      ...mapGetters({ missionExpanded: 'missionExpanded' }),
       link(){
-        return this.mission?.links?.article_link ? this.mission.links.article_link : this.mission?.links?.video_link
+        return this.missionExpanded?.links?.article_link ? this.missionExpanded.links.article_link : this.missionExpanded?.links?.video_link
       }
+    },
+    methods: {
+      ...mapActions({ changeMission: 'changeMission' }),
     },
   }
 </script>

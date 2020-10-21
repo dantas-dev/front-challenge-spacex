@@ -31,12 +31,10 @@
           :key="item.id"
           :mission="item"
           v-show=" $vuetify.breakpoint.smAndUp || !missionExpanded.id "
-          @target="missionExpanded = $event"
         />
         <core-mission-card
           v-show="missionExpanded.id && $vuetify.breakpoint.xsOnly"
           :mission="missionExpanded"
-          @clearTarget="missionExpanded = {}"
         />
       </v-col>
       <v-col
@@ -46,8 +44,8 @@
       >
         <transition
           name="slide"
-          @enter="inTransition = true"
-          @after-leave="inTransition = false"
+          @enter="setTransition(true)"
+          @after-leave="setTransition(false)"
         >
           <v-img
             class="rocket-sticky"
@@ -73,13 +71,7 @@
             color="white"
           ></v-progress-circular>
         </div>
-        <core-mission-card
-          v-show="missionExpanded.id && $vuetify.breakpoint.smAndUp && !inTransition"
-          :mission="missionExpanded"
-          @clearTarget="clear"
-          key="1"
-          class="rocket-sticky mt-13"
-        />
+        <router-view></router-view>
       </v-col>
     </v-row>
   </v-card>
@@ -87,19 +79,18 @@
 
 <script>
 import gql from "graphql-tag";
+import { mapMutations, mapGetters } from 'vuex'
 export default {
   name: "Dashboard",
 
   data: () => ({
-    missionExpanded: {},
     inTransition: true,
   }),
+  computed: {
+     ...mapGetters({ missionExpanded: 'missionExpanded' }),
+  },
   methods: {
-    clear() {
-      this.$nextTick(() => {
-        this.missionExpanded = {};
-      });
-    },
+     ...mapMutations({ setTransition: 'SET_TRANSITION' }),
   },
   apollo: {
     launchesPast: gql`
