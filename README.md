@@ -1,37 +1,49 @@
+
 # 🚀 Front-End challenge - Graphql API SpaceX
-This is a quick coding challenge we designed to assess your qualifications as a potential front-end developer. It's important to note that this is by no means a test. We just want to get a sense of how you write code and solve problems.
 
-## Getting started
-To get started with this challenge: 
-1) Fork this repository.
-2) Create a branch with the name: ``yourlevel-yourname``, example: ``JR-joaosilva``
-3) When you finish, make a pull request with name ``yourname``, example ``João Silva`` and add a tag with your level (JR/PL/SR).
 
-## The Challenge
-We'll be looking for **simple, well-designed and tested(only PL/SR)** code in the submission.
+Responsive Layout
+### Mobile
+![Alt text](src/assets/mobile-1.JPG?raw=true "Layout Mobile 1")
+![Alt text](src/assets/mobile-2.JPG?raw=true "Layout Mobile 2")
+### Desktop 
+![Alt text](src/assets/desktop-1.JPG?raw=true "Layout Desktop 1")
+![Alt text](src/assets/desktop-2.JPG?raw=true "Layout Desktop 2")
 
-Please include a ``INSTRUCTIONS.md``:
-- Add prints of your application in the repository and use them in the readme
-- Setup instructions
-- How did you decide which technologies to use as part of your solution
-- Are there any improvements you could make to your submission
-- What would you do differently if you were allocated more time
+## Covered Points
+* Responsive Layout
+* Componentization
+* GraphQL
+* Apollo
 
-## Details
-Use the [SpaceX Graphql API](https://api.spacex.land/graphql/) and create a project based on this [wireframe](https://bit.ly/2SwvPSP). Use your creativity to choose colors etc...
 
-### Routes
-#### Dashboard
-- List the last 10 missions
-- Clicking on the card, goes to the **Mission** route
+## Technologies Used
+* Vue.js
+* Vuetify
+* Apollo GraphQL
+* Sass
+* JavaScript
 
-#### Mission
-- Details of the mission (image, etc...)
-- Button to external link
+Usually I use Routes and Vuex in my projects, but I decided to keep the project as simple as possible.
+I like to use Vuetify for styling and to speed up development on my projects, however I dont have any problem learning and working with other libraries.
 
-## Required
-- Vue or React or Angular
-- TDD (only PL/SR)
+This was the first time I worked with GraphQL and I really liked it. I intend to study it more and go deeper into it.
 
-## Desirable
-- Vue using apollo client
+## Improvements
+Depending on the demand and growth of the project, I would choose to use routing and state control with Vuex. 
+I would also like to style the project more, I am very perfectionist and I love beautiful interfaces and implement tests, which I am studying at the moment, but I still don’t have confidence to use them yet.
+
+If I had more time, I would definitely learn more about Graphql and Apollo and improve the layout.
+## Project setup
+```
+npm install
+```
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+Lucas Ferreira  – lucasferreirarm@gmail.com
+
+
+

@@ -1,18 +1,14 @@
 <template>
   <v-app>
-      <Dashboard/>
+    <router-view />
   </v-app>
 </template>
 
 <script>
-import Dashboard from './views/Dashboard';
-
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-    Dashboard,
-  },
+  components: {},
 
   data: () => ({
     //

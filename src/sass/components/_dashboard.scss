@@ -4,11 +4,16 @@
 
 .slide-leave-active,
 .slide-enter-active {
-  transition: 0.5s;
+  transition: 1s;
 }
 .slide-enter {
   transform: translate(0, 100%);
 }
 .slide-leave-to {
   transform: translate(0, -100%);
+}
+
+.rocket-sticky {
+  position: sticky; /* apenas chrome e webkit nightly */
+  top: 20px;
 }
