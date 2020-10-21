@@ -1,0 +1,14 @@
+.rocket-icon {
+    transform: rotate(20deg);
+}
+
+.slide-leave-active,
+.slide-enter-active {
+  transition: 0.5s;
+}
+.slide-enter {
+  transform: translate(0, 100%);
+}
+.slide-leave-to {
+  transform: translate(0, -100%);
+}

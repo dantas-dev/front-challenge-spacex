@@ -1,0 +1,25 @@
+.v-application {
+   
+  font-family: $body-font-family, sans-serif !important;
+  font-weight: 300;
+
+   .title {
+      font-family: $title-font-family, sans-serif !important;
+      font-size: 1.5rem !important;
+      line-height: 2rem;
+      letter-spacing: normal !important;
+      font-weight: 700;
+      word-break: break-word;
+      display: flex;
+      flex-wrap: inherit;
+      color: #FFF
+
+   }  
+  a {
+      text-decoration: none;
+   }
+}
+
+#main img {
+  height: 100%
+}
