@@ -1,7 +1,9 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import Header from './components/Header';
-import Mission from './components/Missions';
+import Mission from './pages/Missions';
+import MissionDetails from './pages/MissionDetails';
 import './styles/MissionCard.css';
 import './App.css';
 
@@ -16,7 +18,12 @@ function App() {
       <main className="App-container">
         <Header />
         <section className="App-section">
-          <Mission />
+          <BrowserRouter>
+          <Switch>
+            <Route exact path="/mission/:id"><MissionDetails /></Route>
+            <Route path="/"><Mission /></Route>
+          </Switch>
+          </BrowserRouter>
         </section>
       </main>
     </ApolloProvider>

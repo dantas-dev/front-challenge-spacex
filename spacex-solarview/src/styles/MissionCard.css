@@ -32,3 +32,8 @@ h4, h5 {
 p {
   font-size: 15px;
 }
+
+.card-link {
+  color: #f8f8f2ff;
+  text-decoration: none;
+}

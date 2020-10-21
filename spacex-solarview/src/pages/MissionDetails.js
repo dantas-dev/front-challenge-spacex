@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { useQuery, gql } from '@apollo/client';
 
 const MISSION_DETAILS = gql`
-  query GetMoreInfo {
+  {
     launchesPast(limit: 10, offset: 10) {
       mission_name
       launch_date_local
@@ -13,7 +13,6 @@ const MISSION_DETAILS = gql`
         article_link
         video_link
         flickr_images
-        wikipedia
       }
       rocket {
         rocket_name
@@ -26,26 +25,30 @@ const MISSION_DETAILS = gql`
             }
           }
         }
-        second_stage {
-          payloads {
-            payload_type
-            payload_mass_kg
-            payload_mass_lbs
-          }
-        }
       }
       details
       launch_success
+      id
     }
   }
 `;
 
-export default class MissionDetails extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
+function MissionDetails() {
+  const { loading, error, data } = useQuery(MISSION_DETAILS);
+
+  async function sonsoleLogo(data) {
+    console.log(data);
   }
-}
+
+  sonsoleLogo(data);
+
+  if (loading) return <h3>Loading...</h3>;
+  if (error) return `Error! ${error}`;
+  return (
+    <article className="detail-container">
+      {/* <p>{data.launchesPast}</p> */}
+    </article>
+  )
+};
+
+export default MissionDetails;

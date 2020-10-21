@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
-import MissionCard from './MissionCard';
+import MissionCard from '../components/MissionCard';
 
 const MISSIONS_CARDS = gql`
   {
@@ -21,6 +21,7 @@ const MISSIONS_CARDS = gql`
         }
       }
       launch_success
+      id
     }
   }
 `;
