@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Mission from './pages/Missions';
 import MissionDetails from './pages/MissionDetails';
 import './styles/MissionCard.css';
+import './styles/DetailCard.css';
 import './App.css';
 
 const client = new ApolloClient({

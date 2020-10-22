@@ -1,5 +1,7 @@
 import React from 'react';
 import { useQuery, gql } from '@apollo/client';
+import { useParams } from 'react-router-dom';
+import DetailCard from '../components/DetailCard';
 
 const MISSION_DETAILS = gql`
   {
@@ -35,18 +37,16 @@ const MISSION_DETAILS = gql`
 
 function MissionDetails() {
   const { loading, error, data } = useQuery(MISSION_DETAILS);
-
-  async function sonsoleLogo(data) {
-    console.log(data);
-  }
-
-  sonsoleLogo(data);
+  const { id } = useParams();
+  // console.log(id);
+  // const dataLaunches = JSON.stringify(data);
 
   if (loading) return <h3>Loading...</h3>;
   if (error) return `Error! ${error}`;
   return (
     <article className="detail-container">
-      {/* <p>{data.launchesPast}</p> */}
+      {data.launchesPast.filter((launche) => launche.id === id)
+        .map((filteredLaunche) => <DetailCard mission={ filteredLaunche } key={ filteredLaunche.id } />)}
     </article>
   )
 };

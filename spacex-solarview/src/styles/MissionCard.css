@@ -4,29 +4,12 @@
   box-shadow: 3px 3px 8px #282a36ff;
   display: flex;
   flex-direction: column;
+  height: 200px;
   justify-content: center;
   margin: 10px 15px;
+  padding: 5px 3px;
   text-align: center;
-  width: 250px;
-}
-
-.mission-card img {
-  contain: content;
-  width: 250px;
-}
-
-.image-card {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  height: 250px;
-  overflow: hidden;
-  width: 250px;
-}
-
-h4, h5 {
-  margin: 5px 0;
-  padding: 0;
+  width: 300px;
 }
 
 p {
