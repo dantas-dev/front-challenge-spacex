@@ -1,21 +1,23 @@
 # SolarView - SpaceX Challenge
 
-## BEFORE START:
+## SETUP INSTRUCTIONS
+
+### Before start:
 
 1. Clone the repository
   * `git clone git@github.com:Gui-Alucard/front-challenge-spacex.git`.
   * Go to the cloned project directory:
     * `cd spacex-solarview`
 
-2. IF NECESSARY: Install dev dependencies and go to Setup instructions
+2. IF NECESSARY: Install dev dependencies and go to Starting
   * To install the dependencies, run:
     * `npm install`
 
-## Setup instructions
+### Starting
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -52,18 +54,18 @@ You will also see any lint errors in the console.
 ![GraphQL use](./src/styles/palleteColor.png)
 
 
-#### Technologies
+### Technologies
 
  - I decided to use React and Apollo following the official documentation of GraphQL<br>
  plus, it is my most familiar Technologies!
 
-#### Are there any improvements
+### Are there any improvements
 
  - Code refactoring is always a learning opportunity and that’s something I don’t refuse.
   * I am looking forward to working with programming and always open to learning new technologies<br>
   as was the case with this recent GraphQL.
 
-#### What would I do differently
+### What would I do differently
 
  - I would probably add RTL tests and instead of adding external links to videos,<br>
  I would incorporate it into the site.
