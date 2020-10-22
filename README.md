@@ -2,11 +2,6 @@
 
 ## Project setup
 
-### Clone project
-```
-git clone https://github.com/CHIODELLIz/pl-gabrielmasiero.git
-```
-
 ### Install all dependencies
 ```
 npm install
