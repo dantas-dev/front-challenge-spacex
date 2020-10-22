@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`displayed last launches correctly with query data 1`] = `
+<div
+  class="flex items-center bg-gray-200"
+>
+  <div
+    class="flex-1"
+  />
+   
+  <div
+    class="flex-1 text-gray-700 bg-gray-200 px-4 py-2 m-2"
+  >
+    <h3
+      class="py-10 text-3xl"
+    >
+      Last Lauches 🚀
+    </h3>
+     
+    <div
+      class="result apollo"
+    />
+  </div>
+   
+  <div
+    class="flex-1"
+  />
+   
+  <custom-modal-stub
+    classes=""
+    clicktoclose="true"
+    height="auto"
+    maxheight="9007199254740991"
+    maxwidth="9007199254740991"
+    minheight="0"
+    minwidth="0"
+    name="launch-detail"
+    overlaytransition="vm-transition--overlay"
+    shiftx="0.5"
+    shifty="0.5"
+    style="overflow-y: scroll;"
+    transition="vm-transition--modal"
+    width="600"
+  >
+    <!---->
+     
+    <p
+      class="text-2xl text-indigo-500 text-center h-3 mb-5 py-5"
+    >
+      
+    </p>
+     
+    <p
+      class="text-xl text-gray-800 text-center mb-5"
+    >
+      
+    </p>
+     
+    <div
+      class="flex items-center mb-5"
+    >
+      <div
+        class="flex-1"
+      />
+       
+      <div
+        class="flex-2 text-center"
+      >
+        <button
+          class="flex 1 bg-gray-800 hover:bg-gray-500 text-white py-2 px-3 uppercase font-semibold text-2xs rounded"
+          type="button"
+        >
+          See more
+        </button>
+      </div>
+       
+      <div
+        class="flex-1"
+      />
+    </div>
+  </custom-modal-stub>
+</div>
+`;
+
+exports[`renders correctly when loading last launches 1`] = `
+<div
+  class="flex items-center bg-gray-200"
+>
+  <div
+    class="flex-1"
+  />
+   
+  <div
+    class="flex-1 text-gray-700 bg-gray-200 px-4 py-2 m-2"
+  >
+    <h3
+      class="py-10 text-3xl"
+    >
+      Last Lauches 🚀
+    </h3>
+     
+    <div
+      class="result apollo"
+    />
+  </div>
+   
+  <div
+    class="flex-1"
+  />
+   
+  <!---->
+</div>
+`;
