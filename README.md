@@ -37,3 +37,4 @@ npm run lint
 - Vue
 - Apollo client
 - Jest (for tests)
+- Tailwind
