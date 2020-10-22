@@ -27,26 +27,30 @@ You will also see any lint errors in the console.
 ## About the Code
 ---
 
-1. Here is my Work Space on VSCode
+#### 1. Here is my Work Space on VSCode
   * I like to create different folders as you can see.
   
 ![WorkSpace](./src/styles/workSpace.png)
 
-2. Here is how I am using Apollo's Client and the BrowserRouter
+
+#### 2. Here is how I am using Apollo's Client and the BrowserRouter
   * usually with a unique end-point.
   * routing the main page and mission detail.
   
 ![App.js](./src/styles/apolloClient.png)
 
-3. Here is how I am using the GraphQL madeed query
+
+#### 3. Here is how I am using the GraphQL madeed query
   * I tried use the query `find` but it seems to be some problem returning a empty array
   * That make me use filter's and map's HOF at MissionDetails.js
   
 ![GraphQL use](./src/styles/graphQL.png)
 
-4. No less important, pallete color for this project
+
+#### 4. No less important, pallete color for this project
 
 ![GraphQL use](./src/styles/palleteColor.png)
+
 
 #### Technologies
 
