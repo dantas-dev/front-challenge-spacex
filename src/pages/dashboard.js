@@ -14,10 +14,9 @@ function Dashboard() {
 
     useEffect(() => {
         function get_missions() {
-            try {
-                api
-                    .query({
-                        query: gql`
+            api
+                .query({
+                    query: gql`
                         query get_launchs {
                             launchesPast(limit: 10) {
                                 mission_name
@@ -27,11 +26,9 @@ function Dashboard() {
                             }
                         }
                     `
-                    })
-                    .then(result => set_missions(result.data.launchesPast));
-            } catch (err) {
-                console.log(err)
-            }
+                })
+                .then(result => set_missions(result.data.launchesPast))
+                .catch(err => console.log(err));
         }
 
         get_missions();
