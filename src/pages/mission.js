@@ -12,7 +12,8 @@ function Mission({ match }) {
 
     useEffect(() => {
         function get_mission() {
-            api
+            try{
+                api
                 .query({
                     query: gql`
                         query get_launchs {
@@ -29,6 +30,10 @@ function Mission({ match }) {
                     `
                 })
                 .then(result => set_mission(result.data.launch));
+            }catch(err){
+                console.log(err)
+            }
+           
         }
 
         get_mission();
