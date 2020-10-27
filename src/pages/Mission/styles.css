@@ -45,6 +45,7 @@
     align-items: center;
     margin-top: 2rem;
     margin-right: 1.2rem;
+    
 }
 
 .link-container a.video {
@@ -53,4 +54,13 @@
 
 .link-container a.article {
     background: #ffd166;
+}
+
+.icons {
+    text-decoration: none;
+    color: white;
+}
+
+.icons:hover {
+    color: rgb(175, 175, 175);
 }
