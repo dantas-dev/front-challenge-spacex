@@ -1,0 +1,29 @@
+.card {
+    margin: 4rem;
+}
+
+.card-header h1 {
+    font: 2rem Teko;
+    color: black
+}
+
+.card-header h1:hover {
+    font-size: 2.1rem;
+    border: none;
+    color: rgb(46, 46, 46);
+    text-decoration: none !important;
+}
+
+.card-header .link {
+    text-decoration: none;
+}
+
+.card-body {
+    font: 1.6rem Oswald;
+}
+
+.card-footer {
+    font: 1.2rem Oswald;
+    font-weight: bold;
+    text-align: right;
+}
