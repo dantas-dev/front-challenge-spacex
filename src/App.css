@@ -1,0 +1,13 @@
+:root {
+  font-size: 70%;
+}
+
+html, body, #root {
+  height: 100vh;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
