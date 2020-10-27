@@ -1,6 +1,9 @@
 import React from 'react'
 import { Container, Carousel, Jumbotron } from 'react-bootstrap'
 import { parseISO, format } from 'date-fns'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFile } from '@fortawesome/free-solid-svg-icons'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 import './styles.css'
 
@@ -39,10 +42,14 @@ function Mission(props) {
             </Container>
             <Container className="link-container">
                 {launch.links.video_link && 
-                    <a className="video" rel="noopener noreferrer" href={launch.links.video_link} target="_blank"> Vídeo</a>
+                    <a className="video" rel="noopener noreferrer" href={launch.links.video_link} target="_blank">
+                         <FontAwesomeIcon className="icons video-icon" icon={faYoutube} size="3x" />
+                    </a>
                 }
                 {launch.links.article_link && 
-                    <a className="article" rel="noopener noreferrer" href={launch.links.article_link} target="_blank"> Artigo</a>
+                    <a className="article" rel="noopener noreferrer" href={launch.links.article_link} target="_blank">
+                         <FontAwesomeIcon className="icons article-icon" icon={faFile} size="3x" />
+                    </a>
                 }
             </Container>
         </Container>
