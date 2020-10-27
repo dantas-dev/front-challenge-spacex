@@ -1,0 +1,56 @@
+.mission-container {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.images-container {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.images-container .jumbotron {
+    margin: 0 !important;
+}
+
+.images-container .carousel img {
+    width:  90rem;
+    height: 40rem;
+}
+
+.text-container {
+    font: 1.6rem Oswald;
+    border: solid 1px;
+    border-radius: 0.8rem;
+}
+
+.text-container h2 {
+    font-family: Teko;
+    margin-top: 1.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.link-container {
+    display: flex;
+}
+
+.link-container a {
+    width: 10rem;
+    height: 5rem;
+    margin-bottom: 0.6rem;
+    border-radius: 0.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-right: 1.2rem;
+}
+
+.link-container a.video {
+    background: #ef476f;
+}
+
+.link-container a.article {
+    background: #ffd166;
+}
