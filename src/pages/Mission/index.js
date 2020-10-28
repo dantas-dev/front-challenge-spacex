@@ -9,7 +9,6 @@ import './styles.css'
 
 function Mission(props) {
     const launch = props.location.data
-    console.log(launch.links.flickr_images)
     const date = format(parseISO(launch.launch_date_local), "dd/mm/yyyy")
 
     return (
@@ -18,9 +17,9 @@ function Mission(props) {
             <Container className="images-container">    
                 { launch.links.flickr_images != 0 && 
                     <Carousel className="carousel">
-                        {launch.links.flickr_images.map(img => {
+                        {launch.links.flickr_images.map((img, i) => {
                             return (
-                                <Carousel.Item >
+                                <Carousel.Item key={i} >
                                     <img src={img} alt="flickr_img"/>
                                 </Carousel.Item>
                             )
