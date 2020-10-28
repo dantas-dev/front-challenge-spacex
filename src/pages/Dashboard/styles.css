@@ -1,3 +1,4 @@
+
 .dashboard h1 {
     font-family: Teko;
     margin-top: 1rem;
@@ -6,6 +7,7 @@
 
 .card {
     margin: 4rem;
+    background-color: #edf6f9 !important;
 }
 
 .card-header h1 {
