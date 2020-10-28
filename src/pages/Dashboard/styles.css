@@ -1,10 +1,17 @@
+.dashboard h1 {
+    font-family: Teko;
+    margin-top: 1rem;
+    text-align: center;
+}
+
 .card {
     margin: 4rem;
 }
 
 .card-header h1 {
     font: 2rem Teko;
-    color: black
+    color: black;
+    text-align: left
 }
 
 .card-header h1:hover {
