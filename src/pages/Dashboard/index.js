@@ -38,23 +38,24 @@ function Dashboard() {
 
     return (
         <Container className="dashboard">
-            {list.map(launch => {
-                return (
-                    <Card className="card" key={launch.id}>
-                        <Card.Header className="card-header">
-                            <Link className="link" to={ {pathname:'/mission', data: launch} } >
-                            <h1>{launch.mission_name}</h1>
-                            </Link>
-                        </Card.Header>
-                        <Card.Body className="card-body">
-                            {launch.details}
-                        </Card.Body>
-                        <Card.Footer className="card-footer">
-                            {format(parseISO(launch.launch_date_local), "dd/mm/yyyy")}
-                        </Card.Footer>
-                    </Card>                    
-                )
-            })}
+            <h1>Launches!</h1>
+                {list.map(launch => {
+                    return (
+                        <Card className="card" key={launch.id}>
+                            <Card.Header className="card-header">
+                                <Link className="link" to={ {pathname:'/mission', data: launch} } >
+                                <h1>{launch.mission_name}</h1>
+                                </Link>
+                            </Card.Header>
+                            <Card.Body className="card-body">
+                                {launch.details}
+                            </Card.Body>
+                            <Card.Footer className="card-footer">
+                                {format(parseISO(launch.launch_date_local), "dd/mm/yyyy")}
+                            </Card.Footer>
+                        </Card>                    
+                    )
+                })}
         </Container>
     )
 }
