@@ -10,5 +10,6 @@ html, body, #root {
   display: flex;
   justify-content: center;
   background-color: #a8dadc;
+  overflow: hidden;
 }
 
