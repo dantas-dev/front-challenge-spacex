@@ -58,15 +58,21 @@
     background: #ef476f;
 }
 
+.link-container a.video:hover {
+    background: #e72451;
+    opacity: 0.7;  
+}
+
 .link-container a.article {
     background: #ffd166;
+}
+
+.link-container a.article:hover {
+    background: #f8c03e;
+    opacity: 0.7;    
 }
 
 .icons {
     text-decoration: none;
     color: white;
-}
-
-.icons:hover {
-    color: rgb(175, 175, 175);
 }
