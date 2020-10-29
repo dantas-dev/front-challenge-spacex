@@ -15,7 +15,7 @@ function Mission(props) {
         
         <Container className="mission-container">
             <Container className="images-container">    
-                { launch.links.flickr_images != 0 && 
+                { launch.links.flickr_images !== 0 && 
                     <Carousel className="carousel">
                         {launch.links.flickr_images.map((img, i) => {
                             return (
