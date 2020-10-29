@@ -34,7 +34,8 @@ function Dashboard() {
         api.query({
           query: gql`${query}`
         })
-        .then(result => setList(result.data.launchesPast));
+        .then(result => setList(result.data.launchesPast))
+        .catch(err => console.log(err));
     }, [])
 
     return (
