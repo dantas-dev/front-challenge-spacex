@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Card } from 'react-bootstrap'
+import ScrollBar from 'react-scrollbars-custom'
 import api from '../../services/api'
 import { gql } from '@apollo/client';
 import { parseISO, format } from 'date-fns'
@@ -39,6 +40,7 @@ function Dashboard() {
     return (
         <Container className="dashboard">
             <h1>Launches!</h1>
+            <ScrollBar style={{ width: "100%", height: "95%"}}>
                 {list.map(launch => {
                     return (
                         <Card className="card" key={launch.id}>
@@ -56,6 +58,7 @@ function Dashboard() {
                         </Card>                    
                     )
                 })}
+            </ScrollBar>
         </Container>
     )
 }
