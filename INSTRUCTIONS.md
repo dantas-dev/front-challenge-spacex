@@ -1,7 +1,7 @@
 # :rocket: Front-End Challenge - GraphQL API Space X :rocket:
 
 ## Instalação
-- No terminal, clone o projeto para a sua máquina
+- No terminal, clone o projeto para a sua máquina:
 
 ```
 https://github.com/letbueno/front-challenge-spacex
@@ -11,13 +11,13 @@ https://github.com/letbueno/front-challenge-spacex
 cd challenge-spacex
 ```
 
-- Instale as dependências
+- Instale as dependências:
 
 ```
 npm install
 ```
 
-- Para iniciar o projeto
+- Para iniciar o projeto:
 
 ```
 npm start
