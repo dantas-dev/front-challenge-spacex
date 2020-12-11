@@ -1,0 +1,20 @@
+.navbar {
+    background-color:rgb(37, 36, 36) ;
+    justify-content: left !important;
+}
+
+.nav-title {
+    color: rgb(240, 235, 235);
+    font-size: 1.5rem;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.nav-title:hover {
+    color:  rgb(194, 191, 191);
+}
+
+.nav-title h1 {
+    margin-left: 15px !important;
+}
