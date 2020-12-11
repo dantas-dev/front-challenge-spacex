@@ -2,12 +2,29 @@
   font-size: 70%;
 }
 
-html, body, #root {
-  height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #root {
-  background-color: #a8dadc;
   overflow: hidden;
 }
 
+.App {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  grid-template-areas: 
+    "head"
+    "main";
+}
+
+.page-header {
+  grid-area: head;
+}
+
+.content {
+  grid-area: main;
+}
