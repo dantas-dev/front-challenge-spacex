@@ -40,9 +40,9 @@ function Dashboard() {
 
     return (
         <Container className="dashboard">
-            <h1>Launches!</h1>
             <ScrollBar style={{ width: "100%", height: "95%"}}>
                 {list.map(launch => {
+                    const details = !launch.details ? "This Mission Doesn't Have A Description Yet" : launch.details
                     return (
                         <Card className="card" key={launch.id}>
                             <Card.Header className="card-header">
@@ -51,7 +51,7 @@ function Dashboard() {
                                 </Link>
                             </Card.Header>
                             <Card.Body className="card-body">
-                                {launch.details}
+                                {details} 
                             </Card.Body>
                             <Card.Footer className="card-footer">
                                 {format(parseISO(launch.launch_date_local), "dd/mm/yyyy")}
