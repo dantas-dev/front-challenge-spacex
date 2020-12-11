@@ -4,6 +4,7 @@ import { parseISO, format } from 'date-fns'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFile } from '@fortawesome/free-solid-svg-icons'
 import { faYoutube } from '@fortawesome/free-brands-svg-icons'
+import ScrollBar from 'react-scrollbars-custom'
 
 import './styles.css'
 
@@ -33,24 +34,27 @@ function Mission(props) {
                 }
             </Container>
             <Container className="text-container">
-                <h2>{launch.mission_name}</h2>
-                {launch.details}
-                <h2>Launch Site</h2>
-                {launch.launch_site.site_name_long}
-                <h2>Launch Date {date} </h2>          
+                <ScrollBar style={{ width: "100%", height: "100%"}}>
+                    <h2>{launch.mission_name}</h2>
+                    {launch.details}
+                    <h2>Launch Site</h2>
+                    {launch.launch_site.site_name_long}
+                    <h2>Launch Date {date} </h2>   
+                    <Container className="link-container">
+                    {launch.links.video_link && 
+                        <a className="video" rel="noopener noreferrer" href={launch.links.video_link} target="_blank">
+                             <FontAwesomeIcon className="icons video-icon" icon={faYoutube} size="3x" />
+                        </a>
+                    }
+                    {launch.links.article_link && 
+                        <a className="article" rel="noopener noreferrer" href={launch.links.article_link} target="_blank">
+                             <FontAwesomeIcon className="icons article-icon" icon={faFile} size="3x" />
+                        </a>
+                    }
+                    </Container>
+                </ScrollBar>       
             </Container>
-            <Container className="link-container">
-                {launch.links.video_link && 
-                    <a className="video" rel="noopener noreferrer" href={launch.links.video_link} target="_blank">
-                         <FontAwesomeIcon className="icons video-icon" icon={faYoutube} size="3x" />
-                    </a>
-                }
-                {launch.links.article_link && 
-                    <a className="article" rel="noopener noreferrer" href={launch.links.article_link} target="_blank">
-                         <FontAwesomeIcon className="icons article-icon" icon={faFile} size="3x" />
-                    </a>
-                }
-            </Container>
+            
         </Container>
     )
 }
