@@ -60,6 +60,8 @@ export default defineComponent({
       }).then((lauches) =>{
         dataCard.launchesPast = lauches.data.launchesPast
         /* console.log(dataCard.launchesPast[0].id) */
+      }).catch((error) =>{
+        console.error(error)
       })
     })
 

@@ -73,6 +73,8 @@ export default defineComponent({
       }).then((lau) => {
         dataMission.launch = lau.data.launch
         console.log(dataMission.launch.links.video_link)
+      }).catch((error) =>{
+        console.error(error)
       })
     })
 
