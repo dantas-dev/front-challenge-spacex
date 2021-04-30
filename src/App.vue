@@ -1,30 +1,42 @@
 <template>
+  <Header />
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
   </div>
   <router-view/>
 </template>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script lang="ts">
+import { defineComponent } from 'vue'
+import Header from './components/Header.vue'
 
-#nav {
-  padding: 30px;
-}
+export default defineComponent({
+  components:{
+    Header
+  }
+})
+</script>
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+<style >
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html{
+    background-color: var(--background);
+    padding: 0 4.5vw;
+  }
+  :root{
+    --blue: #03BFFE;
+    --gray:  #f2f2f2;
+    --darkGray: rgb(168, 168, 168);
+    --black:  #151515;
+    --white: #ffff;
+    --background: rgb(237, 241, 245);
+    }
 </style>
