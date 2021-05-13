@@ -11,8 +11,11 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/vue-fontawesome": "^2.0.2",
+    "apollo-boost": "^0.4.9",
     "core-js": "^3.6.5",
+    "graphql": "^15.5.0",
     "vue": "^2.6.11",
+    "vue-apollo": "^3.0.7",
     "vue-router": "^3.5.1"
   },
   "devDependencies": {
