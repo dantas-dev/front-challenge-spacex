@@ -1,50 +1,56 @@
 <template>
   <main>
     <h1>Last launches <font-awesome-icon icon="rocket" /></h1>
-    <!-- component cardlist -->
     <div class="cardlist">
-      <router-link to="/mission" class="card">
-        <h4>Mission name</h4>
-        <p>dasdiasjdioasjdoiadisajdiasjdiojasdijaidjasijdaisjdoaisdjaisdj.</p>
-        <span>20/04/2020</span>
+      <router-link
+        to="/mission"
+        class="card"
+        v-for="(mission, index) in launches"
+        :key="index"
+      >
+        <h4>{{ mission.mission_name }}</h4>
+        <p v-if="mission.details !== null">
+          {{ mission.details.substring(0, 70) + "..." }}
+        </p>
+        <p v-else>With no description assigned to the event.</p>
+        <span>{{
+          new Date(mission.launch_date_local) | date("dd/MM/yyyy")
+        }}</span>
       </router-link>
-      <div class="card">
-        <h4>Mission name</h4>
-        <p>dasdiasjdioasjdoiadisajdiasjdiojasdijaidjasijdaisjdoaisdjaisdj.</p>
-        <span>20/04/2020</span>
-      </div>
-      <div class="card">
-        <h4>Mission name</h4>
-        <p>dasdiasjdioasjdoiadisajdiasjdiojasdijaidjasijdaisjdoaisdjaisdj.</p>
-        <span>20/04/2020</span>
-      </div>
-      <div class="card">
-        <h4>Mission name</h4>
-        <p>dasdiasjdioasjdoiadisajdiasjdiojasdijaidjasijdaisjdoaisdjaisdj.</p>
-        <span>20/04/2020</span>
-      </div>
-      <div class="card">
-        <h4>Mission name</h4>
-        <p>dasdiasjdioasjdoiadisajdiasjdiojasdijaidjasijdaisjdoaisdjaisdj.</p>
-        <span>20/04/2020</span>
-      </div>
-      <div class="card">
-        <h4>Mission name</h4>
-        <p>dasdiasjdioasjdoiadisajdiasjdiojasdijaidjasijdaisjdoaisdjaisdj.</p>
-        <span>20/04/2020</span>
-      </div>
-      <div class="card">
-        <h4>Mission name</h4>
-        <p>dasdiasjdioasjdoiadisajdiasjdiojasdijaidjasijdaisjdoaisdjaisdj.</p>
-        <span>20/04/2020</span>
-      </div>
     </div>
   </main>
 </template>
 
 <script>
+import gql from "graphql-tag";
+
+import { createDateFilter } from "vue-date-fns";
+import locale from "date-fns/locale/pt-BR";
+
 export default {
   name: "Dashboard",
+  apollo: {
+    launches: {
+      query: gql`
+        query {
+          launchesPast(limit: 10) {
+            mission_name
+            details
+            launch_date_local
+            links {
+              article_link
+              video_link
+              flickr_images
+            }
+          }
+        }
+      `,
+      update: (data) => data.launchesPast,
+    },
+  },
+  filters: {
+    date: createDateFilter("dd MMMM yyyy", { locale }),
+  },
 };
 </script>
 
@@ -73,6 +79,7 @@ h1 {
   justify-content: center;
 }
 .card {
+  width: 40%;
   /* background-color: var(--white); */
   background-color: var(--gray-50);
   margin: 1rem;
@@ -89,5 +96,11 @@ h1 {
 .card span {
   float: right;
   font-style: italic;
+}
+
+@media (max-width: 1080px) {
+  .card {
+    width: 100%;
+  }
 }
 </style>
