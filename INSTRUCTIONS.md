@@ -31,6 +31,8 @@ Creating build
 - Font Awesome
 - Apollo Client
 - Vue Router
+- EsLint
+- Date-fns
 
 - Are there any improvements you could make to your submission
 - What would you do differently if you were allocated more time
