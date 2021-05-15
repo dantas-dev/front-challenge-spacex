@@ -9,10 +9,12 @@ import Mission from "../pages/Mission";
 const routes = [
   {
     path: "/",
+    name: "index",
     component: Dashboard,
   },
   {
-    path: "/mission",
+    path: "/mission/:id",
+    name: "mission",
     component: Mission,
   },
 ];
