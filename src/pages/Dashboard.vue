@@ -3,10 +3,10 @@
     <h1>Last launches <font-awesome-icon icon="rocket" /></h1>
     <div class="cardlist">
       <router-link
-        to="/mission"
         class="card"
-        v-for="(mission, index) in launches"
-        :key="index"
+        v-for="mission in launches"
+        :key="mission.id"
+        :to="{ name: 'mission', params: { id: mission.id } }"
       >
         <h4>{{ mission.mission_name }}</h4>
         <p v-if="mission.details !== null">
@@ -34,6 +34,7 @@ export default {
       query: gql`
         query {
           launchesPast(limit: 10) {
+            id
             mission_name
             details
             launch_date_local
@@ -86,6 +87,10 @@ h1 {
   padding: 1rem;
   border: var(--gray-200) solid 2px;
   border-radius: 0.5rem;
+  opacity: 0.8;
+}
+.card:hover {
+  opacity: 1;
 }
 .card h4 {
   font-size: 1.2rem;
