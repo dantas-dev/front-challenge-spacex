@@ -20,7 +20,7 @@
       <h2 style="font-size: 32px; font-weight: bold; text-align: center">
         Last Launches🚀
       </h2>
-      <div class="container" v-for="mission in missions" :key="mission.id">
+      <div class="container" v-for="mission in launchesPast" :key="mission.id">
         <Mission
           :id="mission.id"
           :name="mission.mission_name"
@@ -33,49 +33,27 @@
 </template>
 <script>
 import Mission from "../components/Mission";
-import axios from "axios";
+
+import gql from 'graphql-tag'
+
 export default {
   name: "App",
   components: { Mission },
   data() {
     return {
-      missions: [],
+ 
     };
   },
-  created() {
-    axios({
-      url: "https://api.spacex.land/graphql/",
-      method: "post",
-      data: {
-        query: `{
-  launchesPast(limit: 10) {
+
+  apollo:{
+    launchesPast(){
+      return gql `{
+  launchesPast(limit: 10, order: "launch_date_local") {
     mission_name
     launch_date_local
-    launch_site {
-      site_name_long
-    }
     links {
       article_link
       video_link
-    }
-    rocket {
-      rocket_name
-      first_stage {
-        cores {
-          flight
-          core {
-            reuse_count
-            status
-          }
-        }
-      }
-      second_stage {
-        payloads {
-          payload_type
-          payload_mass_kg
-          payload_mass_lbs
-        }
-      }
     }
     ships {
       name
@@ -87,13 +65,12 @@ export default {
   }
 }
 
-`,
-      },
-    }).then((res) => {
-      console.log(res.data.data.launchesPast);
-      this.missions = res.data.data.launchesPast;
-    });
+`
+    }
+
+
   },
+ 
 };
 </script>
 
