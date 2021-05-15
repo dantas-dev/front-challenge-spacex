@@ -21,9 +21,13 @@
     "graphql-type-json": "^0.2.1",
     "lowdb": "^1.0.0",
     "mkdirp": "^0.5.1",
+    "sass": "^1.32.13",
+    "sass-loader": "^10.1.1",
     "shortid": "^2.2.8",
+    "swiper": "5.x",
     "vue": "^2.6.11",
     "vue-apollo": "^3.0.7",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-date-fns": "^2.0.1",
     "vue-router": "^3.5.1"
   },
