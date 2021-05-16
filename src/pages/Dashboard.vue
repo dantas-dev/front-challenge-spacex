@@ -8,27 +8,26 @@
         :key="mission.id"
         :to="{ name: 'mission', params: { id: mission.id } }"
       >
-        <h4>{{ mission.mission_name }}</h4>
-        <p v-if="mission.details !== null">
-          {{ mission.details.substring(0, 70) + "..." }}
-        </p>
-        <p v-else>With no description assigned to the event.</p>
-        <span>{{
-          new Date(mission.launch_date_local) | date("dd/MM/yyyy")
-        }}</span>
+        <CardItem
+          v-bind:mission_name="mission.mission_name"
+          v-bind:mission_details="mission.details"
+          v-bind:mission_launch_date="mission.launch_date_local"
+        />
       </router-link>
     </div>
   </main>
 </template>
 
 <script>
-import gql from "graphql-tag";
+import CardItem from "../components/CardItem.vue";
 
-import { createDateFilter } from "vue-date-fns";
-import locale from "date-fns/locale/pt-BR";
+import gql from "graphql-tag";
 
 export default {
   name: "Dashboard",
+  components: {
+    CardItem,
+  },
   apollo: {
     launches: {
       query: gql`
@@ -49,16 +48,11 @@ export default {
       update: (data) => data.launchesPast,
     },
   },
-  filters: {
-    date: createDateFilter("dd MMMM yyyy", { locale }),
-  },
 };
 </script>
 
 <style scoped>
 main {
-  /* background-color: var(--gray-100); */
-
   background-image: url("../assets/mission_background.jpg");
   padding-top: 5rem;
   min-height: 100%;
@@ -81,26 +75,19 @@ h1 {
 }
 .card {
   width: 40%;
-  /* background-color: var(--white); */
   background-color: var(--gray-50);
   margin: 1rem;
   padding: 1rem;
   border: var(--gray-200) solid 2px;
   border-radius: 0.5rem;
   opacity: 0.8;
+  transition: all 0.2s linear;
 }
-.card:hover {
+.card:hover,
+.card:focus {
   opacity: 1;
-}
-.card h4 {
-  font-size: 1.2rem;
-}
-.card p {
-  margin: 1rem 0 1rem 0;
-}
-.card span {
-  float: right;
-  font-style: italic;
+  box-shadow: 2px 8px 100px rgba(0, 0, 0, 0.15);
+  transform: translate3D(0, -8px, 0);
 }
 
 @media (max-width: 1080px) {

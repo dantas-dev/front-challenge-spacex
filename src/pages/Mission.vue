@@ -81,11 +81,6 @@ export default {
       id: this.$route.params.id,
       isLoading: true,
       fullPage: true,
-      dataCarousel: [
-        '<div class="example-slide">Slide 1</div>',
-        '<div class="example-slide">Slide 2</div>',
-        '<div class="example-slide">Slide 3</div>',
-      ],
       swiperOption: {
         navigation: {
           nextEl: ".swiper-button-next",
