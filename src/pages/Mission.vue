@@ -114,10 +114,10 @@ export default {
   flex-direction: column;
   width: 1140px;
   max-width: 100%;
-  padding-top: 1.5rem;
+  padding-top: 1.7rem;
   padding-right: 15px;
   padding-left: 15px;
-  padding-bottom: 1rem;
+  padding-bottom: 0.8rem;
   margin-left: auto;
   margin-right: auto;
 }
