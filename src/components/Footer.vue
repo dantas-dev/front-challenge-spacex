@@ -13,9 +13,9 @@ export default {
 <style scoped>
 footer {
   width: 100%;
-  /* background-color: var(--dark-100); */
   background-color: var(--dark);
   text-align: center;
   padding: 0.5rem;
+  bottom: 0;
 }
 </style>

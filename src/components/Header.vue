@@ -16,11 +16,11 @@ export default {
 
 <style scoped>
 header {
-  background-color: var(--dark);
   position: fixed;
+  background-color: var(--dark);
   width: 100%;
   text-align: center;
-  flex: 1;
+  z-index: 3;
 }
 
 nav {
