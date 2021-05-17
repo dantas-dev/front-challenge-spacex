@@ -5,6 +5,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
+    "test:e2e": "vue-cli-service test:e2e",
     "lint": "vue-cli-service lint",
     "apollo": "vue-cli-service apollo:dev --generate-schema",
     "apollo:schema:generate": "vue-cli-service apollo:schema:generate",
@@ -17,6 +19,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.2",
     "apollo-boost": "^0.4.9",
     "core-js": "^3.6.5",
+    "date-fns": "^2.21.3",
     "graphql": "^15.5.0",
     "graphql-type-json": "^0.2.1",
     "lowdb": "^1.0.0",
@@ -33,9 +36,13 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-e2e-cypress": "^4.5.13",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-mocha": "^4.5.13",
     "@vue/cli-service": "~4.5.0",
+    "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
+    "chai": "^4.1.2",
     "eslint": "^6.7.2",
     "eslint-plugin-graphql": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
@@ -67,6 +74,17 @@
     },
     "plugins": [
       "graphql"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "mocha": true
+        }
+      }
     ]
   },
   "browserslist": [
