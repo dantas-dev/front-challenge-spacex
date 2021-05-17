@@ -6,9 +6,11 @@ This is a quick coding challenge we designed to assess your qualifications as a 
   <img alt="SpaceX" title="#logo" width="300px" src=".github/assets/logo.png"><br>
 </h3>
 
-## Demo
+## Prints
 
-[Demo Netlify](#)
+<img alt="SpaceX" title="#logo" width="500px" width="500px" src=".github/assets/dashboard.png"><br>
+<img alt="SpaceX" title="#logo" width="500px" width="500px" src=".github/assets/details-mission.png"><br>
+<img alt="SpaceX" title="#logo" width="500px" width="500px" src=".github/assets/details-with-not-images.png"><br>
 
 ## Getting started
 
