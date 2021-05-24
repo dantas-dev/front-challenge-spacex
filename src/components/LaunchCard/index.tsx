@@ -1,3 +1,4 @@
+import { formatDate } from 'utils/formatDate'
 import * as S from './styles'
 
 export type LaunchCardProps = {
@@ -17,7 +18,7 @@ const LaunchCard = ({
       This {mission_name} will launch the sixth batch of operational Starlink
       satellites, which are expected to be version 1.0, from SLC-40
     </S.Description>
-    <S.Date>{launch_date}</S.Date>
+    <S.Date>{formatDate(launch_date)}</S.Date>
   </S.Wrapper>
 )
 

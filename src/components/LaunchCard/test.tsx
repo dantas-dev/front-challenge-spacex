@@ -30,4 +30,12 @@ describe('<LaunchCard />', () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it('should render the correct date', () => {
+    const { container } = render(<LaunchCard {...props} />)
+
+    expect(screen.getByText('24/10/2020')).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })

@@ -1,5 +1,71 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<LaunchCard /> should render the correct date 1`] = `
+.c0 {
+  background-color: white;
+  max-width: 470px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 auto;
+  border: 2px solid #c2d0d8;
+  padding: 14px 10px;
+}
+
+.c1 {
+  color: #273944;
+  margin-bottom: 1.2rem;
+  font-size: 1.8rem;
+}
+
+.c2 {
+  color: #273944;
+  margin-bottom: 1.2rem;
+  font-size: 1.6rem;
+}
+
+.c3 {
+  color: #273944;
+  margin-bottom: 1.2rem;
+  margin-bottom: 0px;
+  font-size: 1.6rem;
+  font-style: italic;
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+<a
+  class="c0"
+  href="https://www.google.com.br"
+  target="_blank"
+>
+  <h4
+    class="c1"
+  >
+    Starlink-15
+  </h4>
+  <p
+    class="c2"
+  >
+    This 
+    Starlink-15
+     will launch the sixth batch of operational Starlink satellites, which are expected to be version 1.0, from SLC-40
+  </p>
+  <time
+    class="c3"
+  >
+    24/10/2020
+  </time>
+</a>
+`
+
 exports[`<LaunchCard /> should render the description 1`] = `
 .c0 {
   background-color: white;
@@ -61,7 +127,7 @@ exports[`<LaunchCard /> should render the description 1`] = `
   <time
     class="c3"
   >
-    2020-10-24T11:31:00-04:00
+    24/10/2020
   </time>
 </a>
 `
@@ -127,7 +193,7 @@ exports[`<LaunchCard /> should render the heading 1`] = `
   <time
     class="c3"
   >
-    2020-10-24T11:31:00-04:00
+    24/10/2020
   </time>
 </a>
 `
