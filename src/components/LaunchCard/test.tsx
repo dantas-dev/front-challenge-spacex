@@ -18,4 +18,16 @@ describe('<LaunchCard />', () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it('should render the description', () => {
+    const { container } = render(<LaunchCard {...props} />)
+
+    expect(
+      screen.getByText(
+        `This ${props.mission_name} will launch the sixth batch of operational Starlink satellites, which are expected to be version 1.0, from SLC-40`
+      )
+    ).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
+  })
 })
