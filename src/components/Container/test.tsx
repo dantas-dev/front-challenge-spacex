@@ -16,8 +16,8 @@ describe('<Container />', () => {
         max-width: 538px;
         margin-left: auto;
         margin-right: auto;
-        padding-left: 1.6rem;
-        padding-right: 1.6rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
       }
 
       <div
