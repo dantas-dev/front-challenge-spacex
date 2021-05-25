@@ -23,23 +23,30 @@ const MissionDetails = ({
   links
 }: MissionDetailsProps) => (
   <S.Wrapper>
-    <S.Image src="img/rocket.jpg" alt="Rocket image"></S.Image>
+    <S.Image
+      src="http://localhost:3000/img/rocket.jpg"
+      alt="Rocket image"
+    ></S.Image>
     <S.Content>
       <S.Title>{mission_name}</S.Title>
       {details && <S.Description>{details}</S.Description>}
-      <S.Subtitle>Ships:</S.Subtitle>
-      <S.Ships aria-label="ships">
-        {ships?.map((item, id) => (
-          <S.Ship key={id}>
-            <S.Thumb alt="Thumb image" src={item.image}></S.Thumb>
-            <span>
-              {item.name}
-              <br />
-              Home port: {item.home_port}
-            </span>
-          </S.Ship>
-        ))}
-      </S.Ships>
+      {!!ships.length && (
+        <>
+          <S.Subtitle>Ships:</S.Subtitle>
+          <S.Ships aria-label="ships">
+            {ships?.map((item, id) => (
+              <S.Ship key={id}>
+                <S.Thumb alt="Thumb image" src={item.image}></S.Thumb>
+                <span>
+                  {item.name}
+                  <br />
+                  Home port: {item.home_port}
+                </span>
+              </S.Ship>
+            ))}
+          </S.Ships>
+        </>
+      )}
       <S.WrapperLinks>
         {links.article_link && (
           <S.Link
