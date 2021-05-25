@@ -3,7 +3,6 @@
 exports[`<LaunchCard /> should render the correct date 1`] = `
 .c0 {
   background-color: white;
-  max-width: 470px;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: -webkit-box;
@@ -13,7 +12,6 @@ exports[`<LaunchCard /> should render the correct date 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 0 auto;
   border: 2px solid #c2d0d8;
   padding: 14px 10px;
 }
@@ -69,7 +67,6 @@ exports[`<LaunchCard /> should render the correct date 1`] = `
 exports[`<LaunchCard /> should render the description 1`] = `
 .c0 {
   background-color: white;
-  max-width: 470px;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: -webkit-box;
@@ -79,7 +76,6 @@ exports[`<LaunchCard /> should render the description 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 0 auto;
   border: 2px solid #c2d0d8;
   padding: 14px 10px;
 }
@@ -135,7 +131,6 @@ exports[`<LaunchCard /> should render the description 1`] = `
 exports[`<LaunchCard /> should render the heading 1`] = `
 .c0 {
   background-color: white;
-  max-width: 470px;
   -webkit-text-decoration: none;
   text-decoration: none;
   display: -webkit-box;
@@ -145,7 +140,6 @@ exports[`<LaunchCard /> should render the heading 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 0 auto;
   border: 2px solid #c2d0d8;
   padding: 14px 10px;
 }

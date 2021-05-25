@@ -7,11 +7,9 @@ const baseTitleStyles = css`
 
 export const Wrapper = styled.a`
   background-color: white;
-  max-width: 470px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   border: 2px solid #c2d0d8;
   padding: 14px 10px;
 `

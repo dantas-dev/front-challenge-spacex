@@ -9,11 +9,11 @@ describe('<Container />', () => {
         <h1>Container</h1>
       </Container>
     )
-    expect(container.firstChild).toHaveStyleRule('max-width', '1100px')
+    expect(container.firstChild).toHaveStyleRule('max-width', '538px')
     expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         width: 100%;
-        max-width: 1100px;
+        max-width: 538px;
         margin-left: auto;
         margin-right: auto;
         padding-left: 1.6rem;

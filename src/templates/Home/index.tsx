@@ -9,6 +9,7 @@ export type HomeProps = {
 const Home = ({ launchesPast }: HomeProps) => (
   <Container>
     <S.Wrapper>
+      <S.Title>Last Lauches 🚀</S.Title>
       {launchesPast?.map((launch, id) => (
         <LaunchCard key={id} {...launch} />
       ))}
