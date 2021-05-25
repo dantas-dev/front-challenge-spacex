@@ -3,7 +3,7 @@ import client from 'graphql/client'
 import GET_LAUNCHES from 'graphql/queries/getLaunches'
 import Home, { HomeProps } from 'templates/Home'
 
-type LaunchPastProps = {
+export type LaunchPastProps = {
   id: string
 } & Omit<LaunchCardProps, 'mission_link'>
 
@@ -20,7 +20,7 @@ export async function getStaticProps() {
         return {
           mission_name: item.mission_name,
           launch_date_local: item.launch_date_local,
-          mission_link: `/${item.id}`
+          mission_link: `${item.id}`
         }
       })
     }

@@ -41,8 +41,7 @@ exports[`<LaunchCard /> should render the correct date 1`] = `
 
 <a
   class="c0"
-  href="https://www.google.com.br"
-  target="_blank"
+  href="/mission/https://www.google.com.br"
 >
   <h4
     class="c1"
@@ -105,8 +104,7 @@ exports[`<LaunchCard /> should render the description 1`] = `
 
 <a
   class="c0"
-  href="https://www.google.com.br"
-  target="_blank"
+  href="/mission/https://www.google.com.br"
 >
   <h4
     class="c1"
@@ -169,8 +167,7 @@ exports[`<LaunchCard /> should render the heading 1`] = `
 
 <a
   class="c0"
-  href="https://www.google.com.br"
-  target="_blank"
+  href="/mission/https://www.google.com.br"
 >
   <h4
     class="c1"
