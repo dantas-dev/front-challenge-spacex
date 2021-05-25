@@ -13,5 +13,5 @@ export const Default: Story<LaunchCardProps> = (args) => (
 Default.args = {
   mission_name: 'Starlink-15 (v1.0)',
   mission_link: 'https://www.google.com.br',
-  launch_date: '2020-10-24T11:31:00-04:00'
+  launch_date_local: '2020-10-24T11:31:00-04:00'
 }
