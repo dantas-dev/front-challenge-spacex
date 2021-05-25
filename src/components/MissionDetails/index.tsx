@@ -1,4 +1,6 @@
 import * as S from './styles'
+import { ArrowBack } from '@styled-icons/boxicons-regular/ArrowBack'
+import Link from 'next/link'
 
 type ShipsProps = {
   name: string
@@ -23,6 +25,11 @@ const MissionDetails = ({
   links
 }: MissionDetailsProps) => (
   <S.Wrapper>
+    <Link href="/" passHref>
+      <S.BackIcon>
+        <ArrowBack aria-label="Back icon" />
+      </S.BackIcon>
+    </Link>
     <S.Image
       src="http://localhost:3000/img/rocket.jpg"
       alt="Rocket image"

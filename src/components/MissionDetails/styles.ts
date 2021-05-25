@@ -22,7 +22,18 @@ export const Title = styled.h1`
   font-size: 2.4rem;
   ${baseTitleStyles}
 `
-
+export const BackIcon = styled.a`
+  position: relative;
+  display: block;
+  width: 100%;
+  svg {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    max-width: 30px;
+    color: white;
+  }
+`
 export const Description = styled.p`
   font-size: 1.4rem;
   ${baseTitleStyles}

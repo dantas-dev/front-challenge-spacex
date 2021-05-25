@@ -17,18 +17,32 @@ exports[`<MissionDetails /> should render without video link 1`] = `
   flex-direction: column;
 }
 
-.c1 {
+.c3 {
   width: 100%;
 }
 
-.c3 {
+.c5 {
   font-size: 2.4rem;
   color: #273944;
   margin-bottom: 1.2rem;
   text-align: center;
 }
 
-.c4 {
+.c1 {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.c1 svg {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  max-width: 30px;
+  color: white;
+}
+
+.c6 {
   font-size: 1.4rem;
   color: #273944;
   margin-bottom: 1.2rem;
@@ -36,13 +50,13 @@ exports[`<MissionDetails /> should render without video link 1`] = `
   margin-bottom: 0px;
 }
 
-.c6 {
+.c8 {
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
 }
 
-.c2 {
+.c4 {
   padding: 12px 14px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -51,9 +65,10 @@ exports[`<MissionDetails /> should render without video link 1`] = `
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 100%;
 }
 
-.c7 {
+.c9 {
   list-style: none;
   display: -webkit-box;
   display: -webkit-flex;
@@ -66,13 +81,13 @@ exports[`<MissionDetails /> should render without video link 1`] = `
   margin-top: 1.2rem;
 }
 
-.c7 span {
+.c9 span {
   font-size: 1.4rem;
   color: #273944;
   margin-left: 1.2rem;
 }
 
-.c5 {
+.c7 {
   color: #273944;
   margin-bottom: 1.2rem;
   text-align: center;
@@ -82,14 +97,14 @@ exports[`<MissionDetails /> should render without video link 1`] = `
   margin-top: 1.2rem;
 }
 
-.c8 {
+.c10 {
   width: 100px;
   border-radius: 6px;
   height: 73px;
   object-fit: cover;
 }
 
-.c9 {
+.c11 {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -98,7 +113,7 @@ exports[`<MissionDetails /> should render without video link 1`] = `
   margin-top: 1.2rem;
 }
 
-.c10 {
+.c12 {
   -webkit-text-decoration: none;
   text-decoration: none;
   background-color: #c2d0d8;
@@ -108,46 +123,70 @@ exports[`<MissionDetails /> should render without video link 1`] = `
   padding: 1.6rem;
 }
 
-.c10:first-child {
+.c12:first-child {
   margin-right: 1.2rem;
+}
+
+.c2 {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
 }
 
 <main
   class="c0"
 >
+  <a
+    class="c1"
+    href="/"
+  >
+    <svg
+      aria-hidden="true"
+      aria-label="Back icon"
+      class="c2"
+      fill="currentColor"
+      focusable="false"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"
+      />
+    </svg>
+  </a>
   <img
     alt="Rocket image"
-    class="c1"
-    src="img/rocket.jpg"
+    class="c3"
+    src="http://localhost:3000/img/rocket.jpg"
   />
   <div
-    class="c2"
+    class="c4"
   >
     <h1
-      class="c3"
+      class="c5"
     >
       Starlink-15
     </h1>
     <p
-      class="c4"
+      class="c6"
     >
       SpaceX will launch Sentinel-6 Michael Freilich into low Earth orbit for NASA, NOAA, ESA, and the European Organization for the Exploitation of Meteorological Satellites aboard a Falcon 9 from SLC-4E, Vandenberg Air Force Station. Sentinel-6(A) is an ocean observation satellite providing radar ocean surface altimetry data and also atmospheric temperature profiles as a secondary mission. The booster for this mission is will land at LZ-4.
     </p>
     <h2
-      class="c5"
+      class="c7"
     >
       Ships:
     </h2>
     <ul
       aria-label="ships"
-      class="c6"
+      class="c8"
     >
       <li
-        class="c7"
+        class="c9"
       >
         <img
           alt="Thumb image"
-          class="c8"
+          class="c10"
           src="https://i.imgur.com/MtEgYbY.jpg"
         />
         <span>
@@ -158,11 +197,11 @@ exports[`<MissionDetails /> should render without video link 1`] = `
         </span>
       </li>
       <li
-        class="c7"
+        class="c9"
       >
         <img
           alt="Thumb image"
-          class="c8"
+          class="c10"
           src="https://imgur.com/NHsx95l.jpg"
         />
         <span>
@@ -173,11 +212,11 @@ exports[`<MissionDetails /> should render without video link 1`] = `
         </span>
       </li>
       <li
-        class="c7"
+        class="c9"
       >
         <img
           alt="Thumb image"
-          class="c8"
+          class="c10"
           src="https://i.imgur.com/7VMC0Gn.jpg"
         />
         <span>
@@ -188,11 +227,11 @@ exports[`<MissionDetails /> should render without video link 1`] = `
         </span>
       </li>
       <li
-        class="c7"
+        class="c9"
       >
         <img
           alt="Thumb image"
-          class="c8"
+          class="c10"
           src="https://i.imgur.com/ABXtHKa.jpg"
         />
         <span>
@@ -204,10 +243,10 @@ exports[`<MissionDetails /> should render without video link 1`] = `
       </li>
     </ul>
     <div
-      class="c9"
+      class="c11"
     >
       <a
-        class="c10"
+        class="c12"
         href="https://youtu.be/J442-ti-Dhg"
         target="_blank"
         title="Article Link"
