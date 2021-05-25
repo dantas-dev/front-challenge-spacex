@@ -51,7 +51,7 @@ describe('<MissionDetails />', () => {
       article_link: 'https://youtu.be/J442-ti-Dhg',
       video_link: null
     }
-    render(<MissionDetails {...mock} links={links} />)
+    const { container } = render(<MissionDetails {...mock} links={links} />)
     expect(
       screen.queryByRole('link', { name: 'Video Link' })
     ).not.toBeInTheDocument()
@@ -59,5 +59,7 @@ describe('<MissionDetails />', () => {
     expect(
       screen.getByRole('link', { name: 'Article Link' })
     ).toBeInTheDocument()
+
+    expect(container.firstChild).toMatchSnapshot()
   })
 })

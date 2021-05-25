@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MissionDetails /> should render without video link 1`] = `
+.c0 {
+  border: 2px solid #c2d0d8;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #ffff;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c1 {
+  width: 100%;
+}
+
+.c3 {
+  font-size: 2.4rem;
+  color: #273944;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.c4 {
+  font-size: 1.4rem;
+  color: #273944;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.c6 {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.c2 {
+  padding: 12px 14px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c7 {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1.2rem;
+}
+
+.c7 span {
+  font-size: 1.4rem;
+  color: #273944;
+  margin-left: 1.2rem;
+}
+
+.c5 {
+  color: #273944;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  text-align: start;
+  font-size: 1.8rem;
+  margin-bottom: 0px;
+  margin-top: 1.2rem;
+}
+
+.c8 {
+  width: 100px;
+  border-radius: 6px;
+  height: 73px;
+  object-fit: cover;
+}
+
+.c9 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  margin-top: 1.2rem;
+}
+
+.c10 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: #c2d0d8;
+  color: #273944;
+  font-size: 1.4rem;
+  border-radius: 6px;
+  padding: 1.6rem;
+}
+
+.c10:first-child {
+  margin-right: 1.2rem;
+}
+
+<main
+  class="c0"
+>
+  <img
+    alt="Rocket image"
+    class="c1"
+    src="img/rocket.jpg"
+  />
+  <div
+    class="c2"
+  >
+    <h1
+      class="c3"
+    >
+      Starlink-15
+    </h1>
+    <p
+      class="c4"
+    >
+      SpaceX will launch Sentinel-6 Michael Freilich into low Earth orbit for NASA, NOAA, ESA, and the European Organization for the Exploitation of Meteorological Satellites aboard a Falcon 9 from SLC-4E, Vandenberg Air Force Station. Sentinel-6(A) is an ocean observation satellite providing radar ocean surface altimetry data and also atmospheric temperature profiles as a secondary mission. The booster for this mission is will land at LZ-4.
+    </p>
+    <h2
+      class="c5"
+    >
+      Ships:
+    </h2>
+    <ul
+      aria-label="ships"
+      class="c6"
+    >
+      <li
+        class="c7"
+      >
+        <img
+          alt="Thumb image"
+          class="c8"
+          src="https://i.imgur.com/MtEgYbY.jpg"
+        />
+        <span>
+          GO Ms Tree
+          <br />
+          Home port: 
+          Port Canaveral
+        </span>
+      </li>
+      <li
+        class="c7"
+      >
+        <img
+          alt="Thumb image"
+          class="c8"
+          src="https://imgur.com/NHsx95l.jpg"
+        />
+        <span>
+          GO Ms Chief
+          <br />
+          Home port: 
+          Port Canaveral
+        </span>
+      </li>
+      <li
+        class="c7"
+      >
+        <img
+          alt="Thumb image"
+          class="c8"
+          src="https://i.imgur.com/7VMC0Gn.jpg"
+        />
+        <span>
+          Just Read The Instructions 2
+          <br />
+          Home port: 
+          Port of Los Angeles
+        </span>
+      </li>
+      <li
+        class="c7"
+      >
+        <img
+          alt="Thumb image"
+          class="c8"
+          src="https://i.imgur.com/ABXtHKa.jpg"
+        />
+        <span>
+          GO Quest
+          <br />
+          Home port: 
+          Port Canaveral
+        </span>
+      </li>
+    </ul>
+    <div
+      class="c9"
+    >
+      <a
+        class="c10"
+        href="https://youtu.be/J442-ti-Dhg"
+        target="_blank"
+        title="Article Link"
+      >
+        Article Link
+      </a>
+    </div>
+  </div>
+</main>
+`
