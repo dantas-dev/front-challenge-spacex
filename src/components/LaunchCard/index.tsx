@@ -12,7 +12,7 @@ const LaunchCard = ({
   mission_link,
   launch_date_local
 }: LaunchCardProps) => (
-  <S.Wrapper target="_blank" href={mission_link}>
+  <S.Wrapper href={`/mission/${mission_link}`}>
     <S.Title>{mission_name}</S.Title>
     <S.Description>
       This {mission_name} will launch the sixth batch of operational Starlink
