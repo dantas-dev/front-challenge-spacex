@@ -1,8 +1,14 @@
 const GET_LAUNCHES_BY_ID = /* GraphQL */ `
   query GET_LAUNCHES_BY_ID($id: ID!) {
-    launchesPast(limit: 10, id: $id) {
+    launch(id: $id) {
       mission_name
       launch_date_local
+      details
+      ships {
+        name
+        home_port
+        image
+      }
       launch_site {
         site_name_long
       }

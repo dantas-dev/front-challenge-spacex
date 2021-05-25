@@ -36,6 +36,7 @@ export const Content = styled.div`
   padding: 12px 14px;
   display: flex;
   flex-direction: column;
+  width: 100%;
 `
 export const Ship = styled.li`
   list-style: none;
