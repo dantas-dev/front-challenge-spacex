@@ -8,7 +8,7 @@ This is a quick coding challenge we designed to assess your qualifications as a 
 
 ## Screenshots
 
-![Mobile](screenshots/Mobile.png)
+![Mobile](screenshots/mobile.png)
 
 ![Desktop](screenshots/Desktop.png)
 
