@@ -6,7 +6,7 @@ import Button from './Button'
 const Card = ({ image, name, details, date, external_link }) => {
   const [expanded, setExpanded] = useState(false)
 
-  const onClick = (event) => {
+  const onClick = event => {
     setExpanded(prevExpanded => !prevExpanded)
     event.stopPropagation()
   }
@@ -26,12 +26,14 @@ const Card = ({ image, name, details, date, external_link }) => {
           target='_blank'
         />
       )}
-      {expanded && <Button
-        icon={IconX}
-        onClick={onClick}
-        type='button'
-        className='close-card-button'
-      />}
+      {expanded && (
+        <Button
+          icon={IconX}
+          onClick={onClick}
+          type='button'
+          className='close-card-button'
+        />
+      )}
     </div>
   )
 }
