@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Button from './Button'
 import Form from './Form'
+import './../styles/Header.css'
 
 const Header = ({ onSubmit }) => {
   const [showForm, setShowForm] = useState(false)
