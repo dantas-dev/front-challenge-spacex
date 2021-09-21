@@ -14,8 +14,8 @@ async function fetchLaunches (query) {
 }
 
 async function getLaunches (limit) {
-  if(limit <= 0) return []
-    
+  if (limit <= 0) return []
+
   const query = `
   query {
   launchesPast(limit: ${limit}) {
