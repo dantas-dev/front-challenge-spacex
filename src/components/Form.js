@@ -1,6 +1,7 @@
 import Button from './Button'
 import { IconX } from '@tabler/icons'
 import uniqid from 'uniqid'
+import './../styles/Form.css'
 
 const Form = ({ onSubmit, onClose }) => {
   function generateSelectOptions () {
@@ -21,7 +22,7 @@ const Form = ({ onSubmit, onClose }) => {
         icon={IconX}
         onClick={onClose}
         type='button'
-        className='close-form-button'
+        className='close-form-button danger'
       />
       <label>
         Find{' '}
