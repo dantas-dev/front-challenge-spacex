@@ -42,11 +42,11 @@ async function getLaunches (limit) {
 
 function translateLaunchesObject (launches) {
   return launches.map(launch => {
-    let image = null
+    let image = DEFAULT_IMAGE
     let ref_link = launch.links.article_link || launch.links.video_link
-    let ships = launch.ships
+    let ships = launch.ships.filter((ship) => ship)
     if (ships.length > 0) {
-      image = ships[Math.floor(Math.random() * ships.length)].image
+      image = ships.sort(() => 0.5 - Math.random())[0].image
     }
 
     return {
