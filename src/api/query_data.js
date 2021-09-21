@@ -1,5 +1,16 @@
 async function fetchLaunches(query) {
-  //will find data and return response json
+
+  let data = await fetch('https://api.spacex.land/graphql/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      query
+    })
+  })
+  
+  const json = await data.json()
+
+  return json.data.launchesPast
 }
 
 
