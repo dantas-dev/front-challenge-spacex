@@ -6,6 +6,12 @@ This is a quick coding challenge we designed to assess your qualifications as a 
 
 [See the INSTRUCTIONS.md](INSTRUCTIONS.md)
 
+## Test on browser
+
+Want to test without installing? Test on browser:
+
+[Click here to preview](https://gabesenacom.github.io/front-challenge-spacex/)
+
 ## Screenshots
 
 ![Mobile](screenshots/mobile.png)
