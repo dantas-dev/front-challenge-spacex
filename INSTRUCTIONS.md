@@ -1,6 +1,6 @@
 # Instructions
 
-If you are look for screenshots, [click here](README.MD).
+If you are look for screenshots, [click here](README.md).
 
 ## Setup instructions
 
