@@ -6,7 +6,7 @@ import './../styles/Form.css'
 const Form = ({ onSubmit, onClose }) => {
   function generateSelectOptions () {
     let options = []
-    for (let i = 10; i <= 100; i += 10) {
+    for (let i = 10; i < 100; i += 10) {
       options.push(
         <option key={uniqid()} value={i}>
           {i}
@@ -26,7 +26,7 @@ const Form = ({ onSubmit, onClose }) => {
         className='close-form-button danger'
       />
       <label>
-        Find{' '}
+        Find
         <select className='search-latest-launches'>
           {generateSelectOptions()}
         </select>{' '}
