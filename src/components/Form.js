@@ -18,6 +18,7 @@ const Form = ({ onSubmit, onClose }) => {
 
   return (
     <form onSubmit={onSubmit} className='search-form'>
+      <h4>Search last launches</h4>
       <Button
         icon={IconX}
         onClick={onClose}
