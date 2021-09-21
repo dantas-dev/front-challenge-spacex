@@ -1,9 +1,7 @@
-import Button from './Button'
-
-const LinkButton = ({ text, href, rel, target, onClick }) => {
+const LinkButton = ({ text, className, href, rel, target, onClick }) => {
   return (
-    <a onClick={onClick} href={href} rel={rel} target={target}>
-      <Button text={text} />
+    <a className={'button '+(className || '')} onClick={onClick} href={href} rel={rel} target={target}>
+      {text}
     </a>
   )
 }
