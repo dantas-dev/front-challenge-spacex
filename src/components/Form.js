@@ -30,7 +30,7 @@ const Form = ({ onSubmit, onClose }) => {
         <select className='search-latest-launches'>
           {generateSelectOptions()}
         </select>{' '}
-        most recent launches
+        last launches
       </label>
       <Button text='Search' type='submit' className='search-form-button' />
     </form>
