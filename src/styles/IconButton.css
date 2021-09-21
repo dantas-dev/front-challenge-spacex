@@ -2,6 +2,6 @@
   color: var(--success-color);
 }
 
-.button.icon.danger:hover {
-  color: var(--danger-color);
+.button.icon.danger:hover * {
+  color: var(--danger-color) !important;
 }
