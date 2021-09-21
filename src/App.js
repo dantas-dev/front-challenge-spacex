@@ -2,28 +2,31 @@ import Header from './components/Header'
 import CardList from './components/CardList'
 
 import { useState, useEffect } from 'react'
+import { getLaunches } from './api/query_data'
 
 const App = () => {
-
-  const [latestLaunches, setLatestLaunches] = useState(10)
+  
+  const [latestLaunchesLimit, setLatestLaunchesLimit] = useState(10)
   const [launches, setLaunches] = useState([])
 
   useEffect(() => {
-    //call query api to update card list
-  }, [latestLaunches])
+    getLaunches(latestLaunchesLimit).then(data => {
+      setLaunches(() => data)
+    })
+  }, [latestLaunchesLimit])
 
   const onHeaderSubmit = event => {
     event.preventDefault()
     const target = event.target.querySelector('.search-latest-launches')
     if (target) {
-      setLatestLaunches(() => parseInt(target.value))
+      setLatestLaunchesLimit(() => parseInt(target.value))
     }
   }
-  
+
   return (
     <main>
       <Header onSubmit={onHeaderSubmit} />
-      <CardList launches={launches}/>
+      <CardList launches={launches} />
     </main>
   )
 }
