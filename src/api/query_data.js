@@ -1,5 +1,4 @@
-async function fetchLaunches(query) {
-
+async function fetchLaunches (query) {
   let data = await fetch('https://api.spacex.land/graphql/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -7,17 +6,53 @@ async function fetchLaunches(query) {
       query
     })
   })
-  
-  const json = await data.json()
 
+  const json = await data.json()
   return json.data.launchesPast
 }
 
-
-function getLaunches(limit) {
-  //will create a query with a limit and convert the response data to this object:
-  // {image, name, details, date, ref_link}
-  // the result is a array with this objects
+async function getLaunches (limit) {
+  const query = `
+  query {
+  launchesPast(limit: ${limit}) {
+    mission_name
+    launch_date_local
+    links {
+      article_link
+      video_link
+    }
+    ships {
+      image
+    }
+    details
+  }
+}
+`
+  try {
+    const launches = await fetchLaunches(query)
+    return translateLaunchesObject(launches)
+  } catch (err) {
+    return []
+  }
 }
 
-export {fetchLaunches, getLaunches}
+function translateLaunchesObject (launches) {
+  return launches.map(launch => {
+    let image = null
+    let ref_link = launch.links.article_link || launch.links.video_link
+    let ships = launch.ships
+    if (ships.length > 0) {
+      image = ships[Math.floor(Math.random() * ships.length)].image
+    }
+
+    return {
+      details: launch.details,
+      name: launch.mission_name,
+      image,
+      ref_link,
+      date: new Date(launch.launch_date_local).toDateString()
+    }
+  })
+}
+
+export { fetchLaunches, getLaunches }
