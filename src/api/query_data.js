@@ -44,13 +44,13 @@ function translateLaunchesObject (launches) {
   return launches.map(launch => {
     let image = DEFAULT_IMAGE
     let ref_link = launch.links.article_link || launch.links.video_link
-    let ships = launch.ships.filter((ship) => ship)
+    let ships = launch.ships.filter(ship => ship)
     if (ships.length > 0) {
       image = ships.sort(() => 0.5 - Math.random())[0].image
     }
 
     return {
-      details: launch.details,
+      details: launch.details || 'no details yet',
       name: launch.mission_name,
       image,
       ref_link,
