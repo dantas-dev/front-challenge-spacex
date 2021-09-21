@@ -5,7 +5,7 @@ import Form from './Form'
 const Header = ({ onSubmit }) => {
   const [showForm, setShowForm] = useState(false)
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     setShowForm(() => false)
     onSubmit(event)
   }
