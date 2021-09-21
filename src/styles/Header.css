@@ -9,6 +9,12 @@ header {
   border-bottom: 0.3rem solid var(--black-color);
 }
 
+@media(max-width: 767px) {
+  header .app-title {
+    font-size: 2rem;
+  }
+}
+
 header > * {
   margin-top: 0.5rem;
 }
