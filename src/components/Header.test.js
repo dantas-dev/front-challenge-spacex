@@ -1,7 +1,6 @@
-import Header from './Header'
-
 import { unmountComponentAtNode, render } from 'react-dom'
 import { act } from 'react-dom/test-utils'
+import Header from './Header'
 
 function validateIfHeaderIsWithDefaultComponents (header) {
   expect(header.children.length).toBe(3)
