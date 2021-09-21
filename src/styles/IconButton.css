@@ -1,0 +1,7 @@
+.button.icon.success:hover {
+  color: var(--success-color);
+}
+
+.button.icon.danger:hover {
+  color: var(--danger-color);
+}
