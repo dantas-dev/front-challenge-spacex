@@ -1,7 +1,8 @@
 .search-form {
   display: flex;
   flex-direction: column;
-  max-width: 47rem;
+  border: 0.2rem solid var(--black-color);
+  padding: 1rem;
 }
 
 .search-form-button {
@@ -20,6 +21,8 @@
 
 .search-form label {
   font-size: 1.2rem;
+  padding-right: 5rem;
+  padding-top: 1rem;
 }
 
 .search-latest-launches {
