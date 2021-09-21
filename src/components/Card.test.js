@@ -14,16 +14,6 @@ afterEach(() => {
   container = null
 })
 
-it('Create empty card when has no data', () => {
-  act(() => {
-    render(<Card />, container)
-  })
-
-  const card = container.querySelector('.card')
-
-  expect(card.children.length).toBe(0)
-})
-
 it('Card starts with basic content and className not contains expanded', () => {
   const cardDATA = {
     name: 'Space',
