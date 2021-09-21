@@ -1,3 +1,5 @@
+const DEFAULT_IMAGE = 'https://i.imgur.com/6Cv9SoC.jpg'
+
 async function fetchLaunches (query) {
   let data = await fetch('https://api.spacex.land/graphql/', {
     method: 'POST',
