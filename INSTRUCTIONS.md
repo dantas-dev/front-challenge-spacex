@@ -30,14 +30,6 @@ npm install
 
 Done! You just installed! Let's run it.
 
-### Running tests
-
-1. Run on terminal this command:
-
-```bash
-npm test a
-```
-
 ### Running application
 
 1. Run on terminal this command:
@@ -47,6 +39,14 @@ npm start
 ```
 
 2. The service will show the link to you access this application
+
+### Running tests
+
+1. Run on terminal this command:
+
+```bash
+npm test a
+```
 
 ## Q.A
 
