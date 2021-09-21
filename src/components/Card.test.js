@@ -35,7 +35,7 @@ it('Card starts with basic content and className not contains expanded', () => {
   })
 
   const card = container.querySelector('.card')
-  expect(card.children.length).toBe(4)
+  expect(card.children.length).toBe(3)
   expect(card.className).toBe('card')
 })
 
