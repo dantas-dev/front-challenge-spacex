@@ -30,7 +30,7 @@ const Card = ({ image, name, details, date, external_link }) => {
           className='close-card-button danger'
         />
       )}
-      {image && <img className='card-image' src={image} alt={name} />}
+      {expanded && image && <img className='card-image' src={image} alt={name} />}
       {name && <h4 className='card-name'>{name}</h4>}
       {details && <p className='card-details'>{getDetails()}</p>}
       {date && <p className='card-date'>{date}</p>}
