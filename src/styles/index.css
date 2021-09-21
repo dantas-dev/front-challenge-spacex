@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+:root {
+  --font: 'Noto Sans', sans-serif;
+  --primary-font-weight: 700;
+  --secondary-font-weight: 400;
+
+  --success-color: #4AC631;
+  --danger-color: #FF4732;
+  --darksky-color: #4169DB;
+  --lightsky-color: #0596ff;
+  --white-color: #ffffff;
+  --black-color: #333333;
+
+  --card-border-radius: 1.25rem;
+  --card-shadow-03dp: 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
+  --card-shadow-04dp: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
+  --card-shadow-08dp: 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+* {
+  font-family: var(--font) !important;
+  box-sizing: border-box;
+}
