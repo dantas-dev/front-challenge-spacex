@@ -21,7 +21,7 @@ const Header = ({ onSubmit }) => {
 
   return (
     <header>
-      <h1 className='app-title'>Last Launches</h1>
+      <h1 className='app-title'>Last Launches 🚀</h1>
       <p className='app-description'>
         Find out what happened on the latest SpaceX launches. Click on a card to
         see more
