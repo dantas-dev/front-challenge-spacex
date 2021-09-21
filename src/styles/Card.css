@@ -8,8 +8,6 @@
 .card {
   box-shadow: var(--card-shadow-03dp);
   border-radius: var(--card-border-radius);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
   max-width: 30%;
   min-width: 30%;
   margin: 1rem;
