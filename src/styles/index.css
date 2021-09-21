@@ -7,16 +7,12 @@
 
   --success-color: #4ac631;
   --danger-color: #ff4732;
-  --darksky-color: #4169db;
-  --lightsky-color: #0596ff;
   --white-color: #ffffff;
   --black-color: #333333;
 
   --card-border-radius: 1.25rem;
   --card-shadow-03dp: 0px 3px 4px rgba(0, 0, 0, 0.14),
     0px 3px 3px rgba(0, 0, 0, 0.12), 0px 1px 8px rgba(0, 0, 0, 0.2);
-  --card-shadow-04dp: 0px 4px 5px rgba(0, 0, 0, 0.14),
-    0px 1px 10px rgba(0, 0, 0, 0.12), 0px 2px 4px rgba(0, 0, 0, 0.2);
   --card-shadow-08dp: 0px 8px 10px rgba(0, 0, 0, 0.14),
     0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2);
 }
