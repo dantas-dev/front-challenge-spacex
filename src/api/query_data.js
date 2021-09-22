@@ -24,9 +24,7 @@ async function getLaunches (limit) {
     links {
       article_link
       video_link
-    }
-    ships {
-      image
+      flickr_images
     }
     details
   }
@@ -43,10 +41,10 @@ async function getLaunches (limit) {
 function translateLaunchesObject (launches) {
   return launches.map(launch => {
     let image = DEFAULT_IMAGE
-    let ref_link = launch.links.article_link || launch.links.video_link
-    let ships = launch.ships.filter(ship => ship)
-    if (ships.length > 0) {
-      image = ships.sort(() => 0.5 - Math.random())[0].image
+    const ref_link = launch.links.article_link || launch.links.video_link
+    const images = launch.links.flickr_images.filter(img => img)
+    if (images.length > 0) {
+      image = images.sort(() => 0.5 - Math.random())[0]
     }
 
     return {
