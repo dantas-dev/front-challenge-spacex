@@ -2,14 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .card {
   box-shadow: var(--card-shadow-03dp);
   border-radius: 0.5rem;
-  max-width: 30%;
-  min-width: 30%;
+  flex-basis: 30%;
   margin: 1rem;
   display: flex;
   flex-direction: column;
@@ -26,22 +25,10 @@
   height: auto;
 }
 
-.card.expanded {
-  max-width: 58%;
-  min-width: 58%;
-}
-
-.card.expanded .card-image {
-  max-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
-}
-
 @media (max-width: 767px) {
   .card,
   .card.expanded {
-    max-width: 80%;
-    min-width: 80%;
+    flex-basis: 80%;
   }
 }
 
