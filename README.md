@@ -1,5 +1,22 @@
 # 🚀 Front-End challenge - Graphql API SpaceX
+
 This is a quick coding challenge we designed to assess your qualifications as a potential front-end developer. It's important to note that this is by no means a test. We just want to get a sense of how you write code and solve problems.
+
+## Setup instructions
+
+[See the INSTRUCTIONS.md](INSTRUCTIONS.md)
+
+## Test on browser
+
+Want to test without installing? Test on browser:
+
+[Click here to preview](https://gabesenacom.github.io/front-challenge-spacex/)
+
+## Screenshots
+
+![Mobile](screenshots/mobile.png)
+
+![Desktop](screenshots/Desktop.png)
 
 ## Getting started
 To get started with this challenge: 

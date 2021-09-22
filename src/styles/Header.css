@@ -1,0 +1,20 @@
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding: 0.5rem 0;
+  padding-left: 1rem;
+  border-bottom: 0.3rem solid var(--black-color);
+}
+
+@media(max-width: 767px) {
+  header .app-title {
+    font-size: 2rem;
+  }
+}
+
+header > * {
+  margin-top: 0.5rem;
+}
