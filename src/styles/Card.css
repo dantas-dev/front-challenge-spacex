@@ -25,6 +25,13 @@
   height: auto;
 }
 
+.card-image-container {
+  max-height: 20rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
 @media (max-width: 767px) {
   .card,
   .card.expanded {
