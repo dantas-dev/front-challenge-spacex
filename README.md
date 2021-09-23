@@ -14,7 +14,7 @@ Want to test without installing? Test on browser:
 
 ## Screenshots
 
-![Mobile](screenshots/mobile.png)
+![Mobile](screenshots/Mobile.png)
 
 ![Desktop](screenshots/Desktop.png)
 
