@@ -6,17 +6,18 @@ import './../styles/Header.css'
 const Header = ({ onSubmit }) => {
   const [showForm, setShowForm] = useState(false)
 
-  const handleSubmit = event => {
-    setShowForm(() => false)
-    onSubmit(event)
+  const handleSubmit = (launchesLimit, event) => {
+    setShowForm(false)
+    event.preventDefault()
+    onSubmit(launchesLimit)
   }
 
   const onHeaderButtonClick = () => {
-    setShowForm(() => true)
+    setShowForm(true)
   }
 
   const onCloseForm = () => {
-    setShowForm(() => false)
+    setShowForm(false)
   }
 
   return (
