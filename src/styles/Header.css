@@ -9,7 +9,7 @@ header {
   border-bottom: 0.3rem solid var(--black-color);
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   header .app-title {
     font-size: 2rem;
   }
