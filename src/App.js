@@ -9,18 +9,12 @@ const App = () => {
   const [launches, setLaunches] = useState([])
 
   useEffect(() => {
-    setLaunches(() => [])
-    getLaunches(latestLaunchesLimit).then(data => {
-      setLaunches(() => data)
-    })
+    setLaunches([])
+    getLaunches(latestLaunchesLimit).then(data => setLaunches(data))
   }, [latestLaunchesLimit])
 
-  const onUpdateLatestLaunchesLimit = event => {
-    event.preventDefault()
-    const target = event.target.querySelector('.search-latest-launches')
-    if (target) {
-      setLatestLaunchesLimit(() => parseInt(target.value))
-    }
+  const onUpdateLatestLaunchesLimit = launchesLimit => {
+    setLatestLaunchesLimit(launchesLimit)
   }
 
   return (
