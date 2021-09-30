@@ -2,3 +2,7 @@
 @forward "fonts";
 @forward "typography";
 @forward "colors";
+
+body {
+  background-color: var(--clr-background);
+}

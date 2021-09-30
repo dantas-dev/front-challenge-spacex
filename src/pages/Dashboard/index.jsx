@@ -2,6 +2,7 @@ import React from 'react';
 
 import './index.scss';
 import RocketIcon from '../../icons/rocket.png';
+import CardMission from '../../components/CardMission';
 
 function Dashboard() {
   return (
@@ -10,6 +11,15 @@ function Dashboard() {
         Last Launches
         <img src={ RocketIcon } alt="Rocket" />
       </h2>
+
+      <section>
+        <CardMission
+          title="Test"
+          // eslint-disable-next-line max-len
+          text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias tempora aut quod quisquam veritatis excepturi architecto nostrum, placeat beatae iusto doloribus ipsam quae. Doloremque et earum dicta voluptas molestiae quis!"
+          date="12/34/56"
+        />
+      </section>
     </main>
   );
 }

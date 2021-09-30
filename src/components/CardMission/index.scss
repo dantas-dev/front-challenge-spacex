@@ -1,0 +1,19 @@
+.card-mission {
+  display: flex;
+  flex-direction: column;
+  padding: 0.875rem 0.625rem;
+  border: 0.125rem solid var(--clr-accent);
+
+  &__title {
+    font-size: 1.1875rem;
+    margin-bottom: 0.125rem;
+  }
+
+  &__text {
+    margin-bottom: 0.5rem;
+  }
+
+  &__date {
+    margin-left: auto;
+  }
+}
