@@ -1,0 +1,14 @@
+body,
+body[data-theme="light"] {
+  --clr-text: hsl(200, 15%, 8%);
+  --clr-element: hsl(0, 0%, 100%);
+  --clr-background: hsl(0, 0%, 98%);
+  --clr-accent: hsl(0, 0%, 52%);
+}
+
+body[data-theme="dark"] {
+  --clr-text: hsl(0, 0%, 100%);
+  --clr-element: hsl(209, 23%, 22%);
+  --clr-background: hsl(207, 26%, 17%);
+  --clr-accent: hsl(209, 23%, 22%);
+}
