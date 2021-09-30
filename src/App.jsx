@@ -1,18 +1,20 @@
 import React from 'react';
 import { Switch, Route } from 'react-router';
 
+import Dashboard from './pages/Dashboard';
+
 function App() {
   return (
     <>
-      Header
+      {/* Header */}
 
       <Switch>
         <Route path="/missions/:missionId">
-          Mission
+          Missions
         </Route>
 
         <Route path="/">
-          Dashboard
+          <Dashboard />
         </Route>
       </Switch>
     </>
