@@ -12,7 +12,21 @@ function Dashboard() {
         <img src={ RocketIcon } alt="Rocket" />
       </h2>
 
-      <section>
+      <section className="dashboard__missions">
+        <CardMission
+          title="Test"
+          // eslint-disable-next-line max-len
+          text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias tempora aut quod quisquam veritatis excepturi architecto nostrum, placeat beatae iusto doloribus ipsam quae. Doloremque et earum dicta voluptas molestiae quis!"
+          date="12/34/56"
+        />
+
+        <CardMission
+          title="Test"
+          // eslint-disable-next-line max-len
+          text="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias tempora aut quod quisquam veritatis excepturi architecto nostrum, placeat beatae iusto doloribus ipsam quae. Doloremque et earum dicta voluptas molestiae quis!"
+          date="12/34/56"
+        />
+
         <CardMission
           title="Test"
           // eslint-disable-next-line max-len
