@@ -15,7 +15,13 @@ function App() {
   };
 
   React.useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) setActiveTheme(savedTheme);
+  }, []);
+
+  React.useEffect(() => {
     document.body.dataset.theme = activeTheme;
+    localStorage.setItem('theme', activeTheme);
   }, [activeTheme]);
 
   return (
