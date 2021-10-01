@@ -1,16 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './index.scss';
 
-function CardMission({ title, text, date }) {
+function CardMission({ id, title, text, date }) {
   return (
-    <div className="card-mission">
-      <h3 className="card-mission__title">{title}</h3>
+    <Link to={ `missions/${id}` }>
+      <div className="card-mission">
+        <h3 className="card-mission__title">{title}</h3>
 
-      <p className="card-mission__text">{text}</p>
+        <p className="card-mission__text">{text}</p>
 
-      <span className="card-mission__date">{date}</span>
-    </div>
+        <span className="card-mission__date">{date}</span>
+      </div>
+    </Link>
+
   );
 }
 

@@ -51,6 +51,7 @@ function Dashboard() {
           missions.map((mission) => (
             <CardMission
               key={ mission.id }
+              id={ mission.id }
               title={ mission.mission_name }
               text={
                 mission.details
