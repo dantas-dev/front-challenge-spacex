@@ -11,4 +11,15 @@
     align-items: center;
     padding: 1rem 2rem;
   }
+
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    color: var(--clr-text);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import './index.scss';
+import { ReactComponent as IconMoon } from '../../icons/moon.svg';
 
 function Header({ toggleTheme, inactiveTheme }) {
   return (
@@ -13,10 +14,12 @@ function Header({ toggleTheme, inactiveTheme }) {
 
         <button
           onClick={ toggleTheme }
+          className="theme-toggle"
           type="button"
         >
           {/*  Capitalizes the first letter of inactiveTheme */}
           {`${inactiveTheme.charAt(0).toUpperCase() + inactiveTheme.slice(1)} Theme`}
+          <IconMoon />
         </button>
       </div>
     </header>
