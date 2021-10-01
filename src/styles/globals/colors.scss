@@ -1,14 +1,17 @@
+:root {
+  --clr-primary: #5c95ff;
+  --clr-accent: #c3cfd9;
+}
+
 body,
 body[data-theme="light"] {
   --clr-text: #293845;
   --clr-element: #ffffff;
   --clr-background: #f0f4f7;
-  --clr-accent: #c3cfd9;
 }
 
 body[data-theme="dark"] {
-  --clr-text: hsl(0, 0%, 100%);
-  --clr-element: hsl(209, 23%, 22%);
-  --clr-background: hsl(207, 26%, 17%);
-  --clr-accent: hsl(209, 23%, 22%);
+  --clr-text: #ffffff;
+  --clr-element: #2b3945;
+  --clr-background: #202c37;
 }

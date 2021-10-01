@@ -1,6 +1,7 @@
 :root {
   --fw-regular: 400;
-  --fw-bold: 600;
+  --fw-semiBold: 600;
+  --fw-bold: 700;
 }
 
 body {
@@ -10,10 +11,15 @@ body {
   color: var(--clr-text);
 }
 
-h1,
+h1 {
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary);
+}
+
 h2,
 h3 {
-  font-weight: var(--fw-bold);
+  font-weight: var(--fw-semiBold);
+  color: var(--clr-primary);
 }
 
 a {

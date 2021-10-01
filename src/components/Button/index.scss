@@ -1,5 +1,6 @@
 .button {
-  background-color: var(--clr-accent);
+  background-color: var(--clr-primary);
+  color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.1875rem;
   cursor: pointer;
@@ -7,7 +8,8 @@
   @media (hover: hover) {
     &:hover {
       background-color: transparent;
-      outline: 0.125rem solid var(--clr-accent);
+      color: var(--clr-text);
+      outline: 0.125rem solid var(--clr-primary);
     }
   }
 }
