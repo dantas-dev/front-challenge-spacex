@@ -10,6 +10,7 @@ function Dashboard() {
   const [missions, setMissions] = React.useState([]);
 
   const ONE_SECOND = 1000;
+  const MAX_CHARS = 128;
 
   // Fetch Missions
   React.useEffect(() => {
@@ -27,6 +28,7 @@ function Dashboard() {
 
     const fetchMissions = async () => {
       const data = await request(url, query);
+
       setMissions(data.launchesPast);
       setLoading(false);
     };
@@ -50,7 +52,11 @@ function Dashboard() {
             <CardMission
               key={ mission.id }
               title={ mission.mission_name }
-              text={ mission.details || 'No details for this mission.' }
+              text={
+                mission.details
+                  ? `${mission.details.substring(0, MAX_CHARS)}...`
+                  : 'There\'s no details for this mission.'
+              }
               date={
                 new Date(mission.launch_date_unix * ONE_SECOND)
                   .toLocaleDateString()
