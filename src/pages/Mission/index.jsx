@@ -5,6 +5,7 @@ import { request, gql } from 'graphql-request';
 import './index.scss';
 import '../../components/Button/index.scss';
 import ImageFallback from '../../images/fallback.jpg';
+import Loading from '../../components/Loading';
 
 function Mission() {
   const { missionId } = useParams();
@@ -38,7 +39,7 @@ function Mission() {
     fetchMission();
   }, [missionId]);
 
-  if (loading) return 'Loading';
+  if (loading) return <Loading />;
 
   return (
     <main className="mission">

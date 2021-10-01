@@ -4,6 +4,7 @@ import { request, gql } from 'graphql-request';
 import './index.scss';
 import RocketIcon from '../../icons/rocket.png';
 import CardMission from '../../components/CardMission';
+import Loading from '../../components/Loading';
 
 function Dashboard() {
   const [loading, setLoading] = React.useState(true);
@@ -36,7 +37,7 @@ function Dashboard() {
     fetchMissions();
   }, []);
 
-  if (loading) return 'Loading';
+  if (loading) return <Loading />;
 
   return (
     <main className="dashboard">
