@@ -1,5 +1,21 @@
+:root {
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+}
+
 body {
   font-family: var(--ff-primary);
   font-size: 0.9375rem;
+  font-weight: var(--fw-regular);
   color: var(--clr-text);
+}
+
+h1,
+h2 {
+  font-weight: var(--fw-bold);
+}
+
+h3 {
+  font-weight: var(--fw-semi-bold);
 }
