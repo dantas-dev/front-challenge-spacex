@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './index.scss';
 
@@ -6,7 +7,9 @@ function Header({ toggleTheme, inactiveTheme }) {
   return (
     <header className="header">
       <div className="container">
-        <h1>Graphql API SpaceX</h1>
+        <Link to="/">
+          <h1>Graphql API SpaceX</h1>
+        </Link>
 
         <button
           onClick={ toggleTheme }
