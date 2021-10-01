@@ -4,6 +4,7 @@ import { request, gql } from 'graphql-request';
 
 import './index.scss';
 import '../../components/Button/index.scss';
+import ImageFallback from '../../images/fallback.jpg';
 
 function Mission() {
   const { missionId } = useParams();
@@ -43,7 +44,10 @@ function Mission() {
     <main className="mission">
       <section className="mission__details">
         <div className="mission__details__image-container">
-          <img src={ mission.links.flickr_images[0] } alt={ mission.mission_name } />
+          <img
+            src={ mission.links.flickr_images[0] || ImageFallback }
+            alt={ mission.mission_name }
+          />
         </div>
 
         <div className="mission__details__text-container">
