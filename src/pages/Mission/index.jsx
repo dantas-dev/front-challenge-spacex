@@ -1,9 +1,9 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import { useParams } from 'react-router';
 import { request, gql } from 'graphql-request';
 
 import './index.scss';
+import '../../components/Button/index.scss';
 
 function Mission() {
   const { missionId } = useParams();
@@ -54,6 +54,7 @@ function Mission() {
             href={ mission.links.article_link }
             target="_blank"
             rel="noreferrer"
+            className="button"
           >
             See more
           </a>
