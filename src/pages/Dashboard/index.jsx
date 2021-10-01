@@ -17,7 +17,7 @@ function Dashboard() {
     const url = 'https://api.spacex.land/graphql/';
     const query = gql`
     {
-      launchesPast(limit: 10) {
+      launchesPast(limit: 10, offset: 1) {
         id
         mission_name
         details
@@ -27,9 +27,9 @@ function Dashboard() {
     `;
 
     const fetchMissions = async () => {
-      const data = await request(url, query);
+      const { launchesPast } = await request(url, query);
 
-      setMissions(data.launchesPast);
+      setMissions(launchesPast);
       setLoading(false);
     };
 

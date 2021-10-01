@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router';
 
 import Dashboard from './pages/Dashboard';
+import Mission from './pages/Mission';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
 
       <Switch>
         <Route path="/missions/:missionId">
-          Missions
+          <Mission />
         </Route>
 
         <Route path="/">
