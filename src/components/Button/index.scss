@@ -2,4 +2,12 @@
   background-color: var(--clr-accent);
   padding: 0.5rem 1rem;
   border-radius: 0.1875rem;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: transparent;
+      outline: 0.125rem solid var(--clr-accent);
+    }
+  }
 }
