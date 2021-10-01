@@ -5,15 +5,11 @@
     max-width: 60rem;
     margin-left: auto;
     margin-right: auto;
-    display: grid;
     background-color: var(--clr-element);
     border: 0.125rem solid var(--clr-accent);
 
-    @media (max-width: 63.9375rem) {
-      grid-template-rows: repeat(2, 1fr);
-    }
-
     @media (min-width: 64rem) {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
       align-items: center;
     }
