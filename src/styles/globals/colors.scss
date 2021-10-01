@@ -1,9 +1,9 @@
 body,
 body[data-theme="light"] {
-  --clr-text: hsl(200, 15%, 8%);
-  --clr-element: hsl(0, 0%, 100%);
-  --clr-background: hsl(0, 0%, 98%);
-  --clr-accent: hsl(0, 0%, 52%);
+  --clr-text: #293845;
+  --clr-element: #ffffff;
+  --clr-background: #f0f4f7;
+  --clr-accent: #c3cfd9;
 }
 
 body[data-theme="dark"] {
