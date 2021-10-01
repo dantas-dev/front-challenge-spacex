@@ -1,7 +1,6 @@
 :root {
   --fw-regular: 400;
-  --fw-semi-bold: 600;
-  --fw-bold: 700;
+  --fw-bold: 600;
 }
 
 body {
@@ -12,12 +11,9 @@ body {
 }
 
 h1,
-h2 {
-  font-weight: var(--fw-bold);
-}
-
+h2,
 h3 {
-  font-weight: var(--fw-semi-bold);
+  font-weight: var(--fw-bold);
 }
 
 a {
