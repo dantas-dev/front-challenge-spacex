@@ -4,17 +4,19 @@
   background-color: var(--clr-element);
   padding: 0.875rem 0.625rem;
   border: 0.125rem solid var(--clr-accent);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   &__title {
-    font-size: 1.125rem;
-    margin-bottom: 0.1875rem;
+    font-size: 1.1875rem;
+    margin-bottom: 0.5rem;
   }
 
   &__text {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.875rem;
   }
 
   &__date {
     margin-left: auto;
+    font-style: italic;
   }
 }
