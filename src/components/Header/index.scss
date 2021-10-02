@@ -1,6 +1,11 @@
 .header {
   background-color: var(--clr-element);
+  padding: 1.5rem 2rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+  &__title {
+    font-size: 1.625rem;
+  }
 
   .container {
     max-width: 75rem;
@@ -9,7 +14,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
   }
 
   .theme-toggle {

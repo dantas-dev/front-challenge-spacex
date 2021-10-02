@@ -9,7 +9,7 @@ function Header({ toggleTheme, inactiveTheme }) {
     <header className="header">
       <div className="container">
         <Link to="/">
-          <h1>Graphql API SpaceX</h1>
+          <h1 className="header__title">Graphql API SpaceX</h1>
         </Link>
 
         <button
