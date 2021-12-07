@@ -1,40 +1,27 @@
-# DESAFIO CONCLUÍDO
-Saiba mais [AQUI](https://github.com/marcusyoda/front-challenge-spacex/blob/SR-marcusyoda/INSTRUCTIONS.md)
+![Logo da SpaceX](https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/SpaceX-Logo.svg/2560px-SpaceX-Logo.svg.png)
+# SPACEX APP
 
-# 🚀 Front-End challenge - Graphql API SpaceX
-This is a quick coding challenge we designed to assess your qualifications as a potential front-end developer. It's important to note that this is by no means a test. We just want to get a sense of how you write code and solve problems.
+[![](https://img.shields.io/github/languages/code-size/badges/shields.svg)](https://github.com/marcusyoda/front-challenge-spacex)
+[![](https://img.shields.io/github/last-commit/google/skia.svg)](https://github.com/marcusyoda/front-challenge-spacex)
+![GitHub Repo stars](https://img.shields.io/github/stars/marcusyoda/front-challenge-spacex)
 
-## Getting started
-To get started with this challenge: 
-1) Fork this repository.
-2) Create a branch with the name: ``yourlevel-yourname``, example: ``JR-joaosilva``
-3) When you finish, make a pull request with name ``yourname``, example ``João Silva`` and add a tag with your level (JR/PL/SR).
+## DESAFIO CONCLUÍDO
+DESAFIO: [AQUI](https://github.com/marcusyoda/front-challenge-spacex/blob/SR-marcusyoda/DESAFIO.md)      
+DEMONSTRAÇÃO ONLINE: [spacex.marcusyoda.com.br](https://spacex.marcusyoda.com.br/#/)  
+INSTRUÇÕES: [AQUI](https://github.com/marcusyoda/front-challenge-spacex/blob/SR-marcusyoda/INSTRUCTIONS.md)      
 
-## The Challenge
-We'll be looking for **simple, well-designed and tested(only PL/SR)** code in the submission.
+Nosso aplicativo é pra quem gosta de acompanhar as missões da SpaceX.
+Ao acessar a Home, você visualiza nossa Dashboard com a lista das últimas missões:  
+![Dashboard do APP](https://github.com/marcusyoda/front-challenge-spacex/blob/SR-marcusyoda/demo-dashboard.png)  
 
-Please include a ``INSTRUCTIONS.md``:
-- Add prints of your application in the repository and use them in the readme
-- Setup instructions
-- How did you decide which technologies to use as part of your solution
-- Are there any improvements you could make to your submission
-- What would you do differently if you were allocated more time
+Você também pode clicar em `Veja Mais`e visualizar detalhes da missão:  
+![Dashboard do APP](https://github.com/marcusyoda/front-challenge-spacex/blob/SR-marcusyoda/demo-mission-single.png)
 
-## Details
-Use the [SpaceX Graphql API](https://api.spacex.land/graphql/) and create a project based on this [wireframe](https://bit.ly/2SwvPSP). Use your creativity to choose colors etc...
+## Integração
+Através de consultas em tempo real, trazemos para você a lista das últimas missões.  
+Se precisar, pode consultar detalhes de cada missão!  
+Saiba mais em: [API SpaceX Land](https://api.spacex.land/graphql/)  
 
-### Routes
-#### Dashboard
-- List the last 10 missions
-- Clicking on the card, goes to the **Mission** route
-
-#### Mission
-- Details of the mission (image, etc...)
-- Button to external link
-
-## Required
-- Vue or React or Angular
-- TDD (only PL/SR)
-
-## Desirable
-- Vue using apollo client
+## Funcionalidade/Tempo extra
+Focado em produzir o melhor resultado, estudei o ciclo de desenvolvimento de um app VUE de ponta a ponta.
+Usei o tempo extra para fazer a build DOCKER do aplicativo e disponibilizar uma versão online.
