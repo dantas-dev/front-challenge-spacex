@@ -1,5 +1,6 @@
 # DESAFIO CONCLUÍDO
-Saiba mais [AQUI](https://github.com/marcusyoda/front-challenge-spacex/blob/INSTRUCTIONS.md)
+Saiba mais [AQUI](https://github.com/marcusyoda/front-challenge-spacex/blob/SR-marcusyoda/INSTRUCTIONS.md)
+
 # 🚀 Front-End challenge - Graphql API SpaceX
 This is a quick coding challenge we designed to assess your qualifications as a potential front-end developer. It's important to note that this is by no means a test. We just want to get a sense of how you write code and solve problems.
 
