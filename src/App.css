@@ -15,17 +15,19 @@ body {
 }
 
 body {
-  color: #c0c0c0;
   background-image: url(https://images.unsplash.com/photo-1475274047050-1d0c0975c63e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 h1 {
   color: #ffffff;
 }
+
 p {
   margin: 5px 0;
 }
+
 img {
   margin-top: 15px;
 }

@@ -3,12 +3,16 @@
     <h1 class="text-center mt-3 mb-3">Visualizar Missão</h1>
     <ApolloQuery :query="query" :variables="{id}">
       <template slot-scope="{ result: { loading, error, data } }">
-        <span v-if="error">Error!</span>
+        <span v-if="error" class="error">
+          <div class="alert alert-warning js-erro" role="alert">
+            Falha ao Carregar a MISSÃO, tente novamente em alguns instantes!
+          </div>
+        </span>
         <span v-else-if="loading">Loading...</span>
         <div class="m-auto d-block" style="max-width: 90%; width: 720px;">
           <div v-if="data" class="row">
-            <div :key="mission.id" v-for="mission in filterList(data.missions)" class="col-sm-12 col-md-12 col-lg-12 mb-3">
-              <card :mission="mission" :link-ref="{name: 'missions'}" link-label="Voltar">
+            <div :key="mission.id" v-for="mission in data.missions" class="col-sm-12 col-md-12 col-lg-12 mb-3">
+              <mission-card :mission="mission" :link-ref="{name: 'missions'}" link-label="Voltar">
                 <table class="table table-striped table-responsive-sm table-bordered mt-3">
                   <thead>
                     <tr>
@@ -27,7 +31,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr :key="payload.id" v-for="payload in filterList(mission.payloads)">
+                    <tr :key="payload.id" v-for="payload in filterPayloads(mission.payloads)">
                       <td>
                         {{ payload.nationality }}
                       </td>
@@ -44,17 +48,20 @@
                   </tbody>
                 </table>
                 <div class="mt-3">
-                  <a class="card-link-circle card-link-circle-mini" :href="mission.wikipedia" target="_blank" title="WIKIPÉDIA">
+                  <a class="card-link-circle card-link-circle-mini" :href="mission.wikipedia" target="_blank"
+                      title="WIKIPÉDIA">
                     <img src="/img/wikipedia.png">
                   </a>
-                  <a class="card-link-circle card-link-circle-mini" :href="mission.twitter" target="_blank" title="TWITTER">
+                  <a class="card-link-circle card-link-circle-mini" :href="mission.twitter" target="_blank"
+                      title="TWITTER">
                     <img src="/img/twitter.png">
                   </a>
-                  <a class="card-link-circle card-link-circle-mini" :href="mission.website" target="_blank" title="WEBSITE">
+                  <a class="card-link-circle card-link-circle-mini" :href="mission.website" target="_blank"
+                      title="WEBSITE">
                     <img src="/img/site.png">
                   </a>
                 </div>
-              </card>
+              </mission-card>
             </div>
           </div>
         </div>
@@ -64,16 +71,13 @@
 </template>
 <script>
 import {gql} from 'apollo-boost';
-import Card from '@/components/Card';
-
-const parseBoolean = (b) => b ? 'Sim' : 'Não';
+import MissionCard from '@/components/MissionCard';
 
 export default {
   name: 'Mission',
-  components: {Card},
+  components: {MissionCard},
   methods: {
-    parseBoolean,
-    filterList: (arr) => arr.filter((v) => v && v.id),
+    filterPayloads: (a) => Array.isArray(a) ? a.filter(p => p && p.manufacturer) : [],
   },
   data() {
     return {
