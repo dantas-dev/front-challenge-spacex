@@ -1,6 +1,6 @@
 <template>
   <div style="max-width: 90%; width: 720px; margin: 12px auto;">
-    <h1 class="text-center mt-3 mb-3">Visualizar Missão</h1>
+    <h1 class="text-center mt-3 mb-3">🚀 Detalhes da Missão</h1>
     <ApolloQuery :query="query" :variables="{id}">
       <template slot-scope="{ result: { loading, error, data } }">
         <span v-if="error" class="error">

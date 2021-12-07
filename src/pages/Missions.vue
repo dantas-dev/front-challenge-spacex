@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-center mt-3 mb-3">Últimas Missões</h1>
+    <h1 class="text-center mt-3 mb-3">🚀 Últimas Missões</h1>
     <ApolloQuery :query="query">
       <template slot-scope="{ result: { loading, error, data } }">
         <span v-if="error" class="error">

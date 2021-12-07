@@ -7,7 +7,7 @@
       <router-link :to="{ name: 'missions' }" class="btn btn-sm btn-primary mt-3">Recomeçar</router-link>
     </div>
     <div v-else class="card-body">
-      <h5 class="card-title">{{ mission.name }}</h5>
+      <h5 class="card-title">{{ mission.name }} 🛰️</h5>
       <ul class="list-unstyled mb-1">
         <li class="card-subtitle text-muted" :key="manufacturer"
             v-for="manufacturer in filterManufactures(mission.manufacturers)">
