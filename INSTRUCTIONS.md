@@ -8,10 +8,10 @@ DEMONSTRAÇÃO ONLINE: [spacex.marcusyoda.com.br](https://spacex.marcusyoda.com.
 
 Nosso aplicativo é pra quem gosta de acompanhar as missões da SpaceX.
 Ao acessar a Home, você visualiza nossa Dashboard com a lista das últimas missões:  
-![Dashboard do APP](https://github.com/marcusyoda/front-challenge-spacex/blob/main/demo-dashboard.png)    
+![Dashboard do APP](https://github.com/marcusyoda/front-challenge-spacex/blob/demo-dashboard.png)    
 
 Você também pode clicar em `Veja Mais`e visualizar detalhes da missão:  
-![Dashboard do APP](https://github.com/marcusyoda/front-challenge-spacex/blob/main/demo-mission-single.png)
+![Dashboard do APP](https://github.com/marcusyoda/front-challenge-spacex/blob/demo-mission-single.png)
 
 ## Integração
 Através de consultas em tempo real, trazemos para você a lista das últimas missões.  
