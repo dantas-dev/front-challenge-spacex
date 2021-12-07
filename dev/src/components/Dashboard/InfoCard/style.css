@@ -1,0 +1,54 @@
+.break-word {
+    word-wrap: break-word;
+}
+
+.date {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.info-card {
+    position: relative;
+    margin: 10px;
+    background-color: #fff;
+    font-weight: 100;
+    letter-spacing: 0.2px;
+    min-height: 128px;
+    max-width: 100%;
+    text-align: left;
+}
+
+.info-card .title {
+    padding: 5px;
+    font-size: 18px;
+    text-align: left;
+    position: relative;
+    color: #000;
+    font-weight: bold;
+}
+
+.border {
+    border: 2px solid #dfe6ed;
+}
+
+.with-shadow {
+    -webkit-box-shadow: 0px 0px 25px 0px rgba(132, 132, 132, 0.2);
+    -moz-box-shadow: 0px 0px 25px 0px rgba(132, 132, 132, 0.2);
+    box-shadow: 0px 0px 25px 0px rgba(132, 132, 132, 0.2);
+}
+
+.p-8 {
+    padding: 8px;
+}
+
+.p-4 {
+    padding: 4px;
+}
+
+.p-l-4 {
+    padding-left: 4px;
+}

@@ -1,19 +1,43 @@
 <template>
   <div class="container">
-    <div class="title">
-      Last Launches <img src="../../assets/rocket.png" width="20px" />
+    <div v-if="$store.state.modinfo.tab == 0">
+      <div class="title">
+        Last Launches <img src="../../assets/rocket.png" width="20px" />
+      </div>
+      <Card />
     </div>
-
-    <div class="card"></div>
-    <Card />
+    <div v-if="$store.state.modinfo.tab == 1">
+      <Mission />
+    </div>
   </div>
 </template>
 
 <script>
-import Card from "./InfoCard.vue";
+import Card from "./InfoCard/InfoCard.vue";
+import Mission from "./Mission/Mission.vue";
 export default {
   name: "DashBoard",
-  components: { Card },
+  components: { Card, Mission },
+
+  computed: {
+    index: {
+      get() {
+        return this.$store.state.modinfo.index;
+      },
+      set(newIndex) {
+        this.$store.commit("SET_INDEX", newIndex);
+      },
+    },
+
+    tab: {
+      get() {
+        return this.$store.state.modinfo.tab;
+      },
+      set(newTab) {
+        this.$store.commit("SET_TAB", newTab);
+      },
+    },
+  },
 };
 </script>
 
