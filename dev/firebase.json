@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "site": "spacexd",
+    "public": "www",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

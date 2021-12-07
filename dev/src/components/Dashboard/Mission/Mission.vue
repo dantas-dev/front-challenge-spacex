@@ -6,7 +6,6 @@
           this.$store.state.modinfo.cards[$store.state.modinfo.index].links
             .flickr_images[0]
         "
-        class="img-block"
       >
         <img
           class="img"
@@ -16,8 +15,8 @@
           "
         />
       </div>
-      <div v-else>
-        <img class="img" src="../../../assets/img.png" />
+      <div v-else class="img-block">
+        <img class="icon" src="../../../assets/img.png" />
       </div>
       <div class="title p-l-4">
         {{
@@ -29,7 +28,7 @@
         v-if="
           this.$store.state.modinfo.cards[$store.state.modinfo.index].details
         "
-        class="break-word p-l-4"
+        class="break-word p-8"
       >
         {{
           this.$store.state.modinfo.cards[$store.state.modinfo.index].details
@@ -63,7 +62,7 @@
 <script>
 import { mapState } from "vuex";
 export default {
-  name: "Mission",
+  name: "InfoMission",
 
   computed: {
     ...mapState(["cards"]),

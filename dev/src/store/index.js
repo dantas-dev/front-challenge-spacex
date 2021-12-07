@@ -63,10 +63,9 @@ const moduleInfo = {
           `
           }
         });
-
         commit('SET_CARDS', result.data.data.launchesPast);
       } catch (error) {
-        console.error(error);
+        alert("Algo deu errado! tente mais tarde.")
       }
     }
   }

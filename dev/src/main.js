@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
-import VueRouter from 'vue-router'
 
-Vue.use(VueRouter)
+import responsive from 'vue-responsive'
+
+Vue.use(responsive)
 
 import VueApollo from "vue-apollo";
 
