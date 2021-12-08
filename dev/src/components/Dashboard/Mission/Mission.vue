@@ -58,19 +58,9 @@
   </div>
 </template>
 
-
 <script>
-import { mapState } from "vuex";
 export default {
   name: "InfoMission",
-
-  computed: {
-    ...mapState(["cards"]),
-  },
-
-  beforeCreate() {
-    this.$store.dispatch("fetchCard");
-  },
 };
 </script>
 

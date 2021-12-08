@@ -1,0 +1,8 @@
+#regras para os testes
+
+Regras:
+      ✔ deve chamar uma consulta sem variáveis @done
+      ✔ deve chamar uma consulta com variáveis @done
+      ✔ deve haver erro ao chamar uma consulta @done
+      ✔ deve chamar uma consulta e carregar 10 cards @done
+      ✔ deve checar o tipo @done

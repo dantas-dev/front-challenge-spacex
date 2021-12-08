@@ -33,14 +33,24 @@ export default {
     ...mapState(["cards"]),
   },
 
+  methods: {
+    fetchCard() {
+      if (this.$store.state.modinfo.cards[0]) {
+        //cached
+      } else {
+        this.$store.dispatch("fetchCard");
+      }
+    },
+  },
+
   filters: {
     dateFormat: function (value, opts) {
       return moment(value).format(opts);
     },
   },
 
-  beforeCreate() {
-    this.$store.dispatch("fetchCard");
+  mounted() {
+    this.fetchCard();
   },
 };
 </script>

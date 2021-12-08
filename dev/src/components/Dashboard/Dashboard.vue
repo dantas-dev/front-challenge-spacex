@@ -1,5 +1,5 @@
 <template>
-  <div class="container" v-responsive="['md']">
+  <div class="container" v-responsive="['xs', 'sm', 'md', 'lg', 'xl']">
     <div v-if="$store.state.modinfo.tab == 0">
       <div class="title">
         Last Launches <img src="../../assets/rocket.png" width="20px" />
@@ -20,11 +20,6 @@ export default {
   name: "DashBoard",
   components: { Card, Mission },
   directives: { vueResponsive },
-  data() {
-    return {
-      middleSize: ["hidden-all", "lg", "xl"],
-    };
-  },
   computed: {
     index: {
       get() {
