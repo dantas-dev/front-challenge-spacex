@@ -1,0 +1,16 @@
+<body>
+    <div id="container">
+        <h1>Last Launches 🚀</h1>
+        <mat-card class="mission-card" *ngFor="let m of missions" (click)="openDetails(m)">
+            <mat-card-title>🚀 {{ m.mission_name }}</mat-card-title>
+            <mat-card-content>
+                <p *ngIf="m.details">
+                    {{ (m.details.length > 200) ? (m.details | slice:0:200 ) + '...' : m.details }}
+                </p>
+            </mat-card-content>
+            <mat-card-actions align="end">
+                {{ m.launch_date_local | date:'dd/MM/yyyy' }}
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</body>

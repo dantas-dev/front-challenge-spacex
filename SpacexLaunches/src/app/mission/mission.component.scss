@@ -1,0 +1,41 @@
+body,
+#container {
+    background-color: #1e1e1e;
+}
+
+#container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    margin-top: 10px;
+}
+
+span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.mission-card {
+    max-width: 80%;
+}
+
+.link-button {
+    margin-left: 10px;
+}
+
+.back-button {
+    width: 200px;
+    height: 40px;
+}
+
+@media (min-width: 980px) {
+    .mission-card {
+        max-width: 50%;
+    }
+}
