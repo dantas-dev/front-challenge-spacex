@@ -1,0 +1,30 @@
+<body>
+    <div id="container">
+        <mat-card class="mission-card">
+            <img *ngIf="mission.ships[0]" mat-card-image src="{{mission.ships[0].image}}">
+            <img *ngIf="!mission.ships[0]" mat-card-image src="../../assets/no_image.jpeg">
+            <mat-card-content>
+                <span>{{mission.mission_name}}</span>
+                <p>
+                    {{mission.details}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions align="start">
+                <a href="{{mission.links.article_link}}" *ngIf="mission.links.article_link">
+                  <button class="link-button" mat-fab color="primary" aria-label="Example icon button with a home icon">
+                    <mat-icon>article</mat-icon>
+                  </button>
+                  </a>
+                  <a href="{{mission.links.video_link}}" *ngIf="mission.links.video_link">
+                    <button class="link-button" mat-fab color="primary" aria-label="Example icon button with a home icon">
+                      <mat-icon>play_circle_filled</mat-icon>
+                    </button>
+                    </a>    
+            </mat-card-actions>
+            <a routerLink="/">
+              <button mat-raised-button class="back-button" color="primary">Back</button>
+              </a>  
+        </mat-card>
+
+    </div>
+</body>
