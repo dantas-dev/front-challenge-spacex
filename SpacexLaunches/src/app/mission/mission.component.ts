@@ -20,7 +20,6 @@ export class MissionComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.queryParams.subscribe((res) => {
       this.mission = JSON.parse(res["data"]);
-      console.log('na mission', this.mission)
   });
   }
 

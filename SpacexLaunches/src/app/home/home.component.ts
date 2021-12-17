@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Apollo, gql } from 'apollo-angular';
 import { NavigationExtras, Router } from '@angular/router';
 
-const GET_MISSIONS = gql`
+const SEARCH_QUERY = gql`
 query {
   launchesPast(limit: 10, offset: 10) {
     mission_name
@@ -39,9 +39,13 @@ export class HomeComponent implements OnInit {
   constructor(private apollo: Apollo, private router: Router) { }
 
   ngOnInit(): void {
+    this.getMissons();
+  }
+
+  getMissons() {
     this.apollo
       .watchQuery({
-        query: GET_MISSIONS,
+        query: SEARCH_QUERY,
       })
       .valueChanges.subscribe((result: any) => {
         this.missions = result.data.launchesPast;
