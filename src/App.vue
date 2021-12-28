@@ -1,7 +1,6 @@
 <template>
-  <div id="app">
-    <h1>TESTE</h1>
-    <router-view></router-view>
+  <div id="app" class="container">
+    <router-view />
   </div>
 </template>
 
@@ -12,11 +11,19 @@ export default {
 </script>
 
 <style>
+@import "./styles/colors.css";
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Arial, Avenir, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 100vh;
+  min-height: 100vh;
+  background-color: var(--background);
   text-align: center;
   color: #2c3e50;
+  border: solid 2px transparent;
+}
+body {
+  margin: 0px;
 }
 </style>

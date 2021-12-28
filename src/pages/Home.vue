@@ -1,18 +1,22 @@
 <template>
-  <ul>
-    <li v-for="item in items" :key="item.id" @click="item.id++">
+  <div v-if="loading">Loading...</div>
+  <ul v-else>
+    <li
+      v-for="item in list"
+      :key="item.id"
+      @click="$router.push({ path: '/detailed/' + item.id })"
+    >
       <div class="content">
         <b class="itemTitle">
-          {{ item.message }}
-          {{ item.id }}
+          {{ item.mission_name }}
         </b>
-        <h5 class="description">
-          {{ item.description }}
+        <h5 class="details">
+          {{ item.details }}
         </h5>
       </div>
       <div class="dateDiv">
         <i class="date">
-          {{ item.date }}
+          {{ item.launch_date_local }}
         </i>
       </div>
     </li>
@@ -20,27 +24,12 @@
 </template>
 
 <script>
+import { getLastLaunches } from "../services/comunication";
 export default {
   name: "Home",
-  data() {
-    return {
-      items: [
-        {
-          id: 0,
-          message: "Vue",
-          date: "04/10/2001",
-          description:
-            "s utilizar a diretiva v-for para renderizar uma lista de elementos com base nos dados de um Array. A diretiva requer uma sintaxe especial na forma de item in items, onde items é a fonte de dados e item é um apelid",
-        },
-        {
-          id: 1,
-          message: "JavaScript",
-          date: "10/10/2010",
-          description:
-            "blocos v-for temos acesso completo às propriedades do escopo pai. Também há suporte a um segundo argumento opcional para o índice d",
-        },
-      ],
-    };
+  setup() {
+    const { data: list, loading } = getLastLaunches();
+    return { list, loading };
   },
 };
 </script>
@@ -50,7 +39,7 @@ li {
   display: flex;
   border: solid 3px #dfe6ed;
   margin-inline: 10rem;
-  height: 80px;
+  min-height: 80px;
   padding: 10px;
   background-color: white;
   margin-bottom: 10px;
@@ -62,10 +51,11 @@ li {
   margin-bottom: 10px;
   font-weight: bold;
 }
-.description {
+.details {
   color: var(--description-item);
   margin-top: 0px;
   font-weight: 600;
+  text-align: left;
 }
 .dateDiv {
   align-self: flex-end;

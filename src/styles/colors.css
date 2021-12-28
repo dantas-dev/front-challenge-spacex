@@ -1,6 +1,7 @@
 :root {
   --font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  --background: #F0F4F7;
+  --background: #f0f4f7;
   --title-item: #293845;
   --description-item: #47545F;
+  --button-default: #C3CFD9
 }
