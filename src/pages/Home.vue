@@ -1,18 +1,22 @@
 <template>
   <div v-if="loading">Loading...</div>
-  <ul v-else>
+  <ul v-else class="container">
+    <h2 class="listTitle">
+      Last Launches
+      <i class="fas fa-rocket" />
+    </h2>
     <li
-      v-for="item in list"
+      v-for="item in data"
       :key="item.id"
       @click="$router.push({ path: '/detailed/' + item.id })"
     >
       <div class="content">
-        <b class="itemTitle">
+        <h3 class="itemTitle">
           {{ item.mission_name }}
-        </b>
-        <h5 class="details">
+        </h3>
+        <span class="details">
           {{ item.details }}
-        </h5>
+        </span>
       </div>
       <div class="dateDiv">
         <i class="date">
@@ -28,17 +32,20 @@ import { getLastLaunches } from "../services/comunication";
 export default {
   name: "Home",
   setup() {
-    const { data: list, loading } = getLastLaunches();
-    return { list, loading };
+    const response = getLastLaunches();
+    return response;
   },
 };
 </script>
 
-<style>
+<style scoped>
+.listTitle {
+  text-align: left;
+  font-weight: bolder;
+}
 li {
   display: flex;
   border: solid 3px #dfe6ed;
-  margin-inline: 10rem;
   min-height: 80px;
   padding: 10px;
   background-color: white;
@@ -48,18 +55,25 @@ li {
 }
 .itemTitle {
   color: var(--title-item);
+  margin: 0px;
   margin-bottom: 10px;
   font-weight: bold;
 }
 .details {
   color: var(--description-item);
-  margin-top: 0px;
-  font-weight: 600;
   text-align: left;
+  margin: 0px;
+  font-weight: bold;
 }
 .dateDiv {
   align-self: flex-end;
   justify-self: flex-end;
+}
+.date {
+  font-weight: 600;
+}
+.container {
+  margin-inline: 10%;
 }
 .content {
   display: flex;

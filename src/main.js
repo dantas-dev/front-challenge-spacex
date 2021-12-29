@@ -2,8 +2,14 @@ import {createApp, provide, h} from 'vue'
 import App from './App.vue'
 import routes from './router'
 import { ApolloClient, createHttpLink, InMemoryCache } from '@apollo/client/core'
-// import { createApolloProvider } from '@vue/apollo-option'
 import { DefaultApolloClient } from '@vue/apollo-composable'
+
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas);
+import { dom } from "@fortawesome/fontawesome-svg-core";
+dom.watch();
 
 const apolloClient = new ApolloClient({
   link: createHttpLink({
@@ -12,21 +18,12 @@ const apolloClient = new ApolloClient({
   cache: new InMemoryCache(),
 })
 
-// const apolloProvider = createApolloProvider({
-//   defaultClient: apolloClient,
-// })
-
 createApp({
   setup () {
     provide(DefaultApolloClient, apolloClient)
   },
-
   render: () => h(App),
 })
-  .use(routes)
-  .mount('#app')
-
-// createApp(App)
-//   .use(routes)
-//   .use(apolloProvider)
-//   .mount('#app')
+.component("font-awesome-icon", FontAwesomeIcon)
+.use(routes)
+.mount('#app')

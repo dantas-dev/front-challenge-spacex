@@ -1,11 +1,12 @@
 <template>
-  <div class="container">
-    <img :src="data.ships[0].image" />
+  <div v-if="loading">Loading...</div>
+  <div class="container" v-else>
+    <img :src="data.image" />
     <div class="textDiv">
       <h2>{{ data.mission_name }}</h2>
       <h4>{{ data.details }}</h4>
     </div>
-    <button @click="console.log(data)">
+    <button v-on:click="goTo(data.seeMore)">
       <h3 class="textButton">See more</h3>
     </button>
   </div>
@@ -17,11 +18,7 @@ import { useRoute } from "vue-router";
 export default {
   name: "Detailed",
   methods: {
-    seeMore: (links) => {
-      let link =
-        links.article_link == null ? links.video_link : links.article_link;
-      window.open(link);
-    },
+    goTo: (link) => window.open(link),
   },
   setup() {
     const route = useRoute();
@@ -31,13 +28,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .container {
   display: flex;
   border: solid 3px #dfe6ed;
-  margin-inline: 5rem;
+  margin-inline: 10%;
   background-color: white;
-  margin-bottom: 10px;
+  margin-block: 20px;
   flex-direction: column;
 }
 button {
@@ -48,6 +45,11 @@ button {
   border-radius: 7px;
   background-color: var(--button-default);
   cursor: pointer;
+}
+img {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  max-height: 50%;
 }
 .textDiv {
   padding-inline: 10px;

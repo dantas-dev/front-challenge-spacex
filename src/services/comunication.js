@@ -38,8 +38,26 @@ export function getLastLaunches () {
 }
 
 export function getLaunch(id){
+  function handleData(data){
+    let {launch} = data;
+    let seeMore = (
+      launch.links.article_link == null ?
+      launch.links.video_link :
+      launch.links.article_link
+    )
+    let image = (
+      launch.ships.length == 0 ?
+      "https://www.corsan.com.br/themes/padrao2019/images/outros/GD_imgSemImagem.png" :
+      launch.ships[0].image
+    )
+    return {
+      ...launch,
+      seeMore,
+      image
+    };
+  } 
   const { result, loading } = useQuery(gql`
-    query getLaunch {
+    query getLaunchDetails {
       launch(id: ${id}) {
         details
         mission_name
@@ -54,7 +72,7 @@ export function getLaunch(id){
     }
   `);
   return {
-    data: result, 
-    loading
+    data: useResult(result, null, data => handleData(data)), 
+    loading,
   };
 }

@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div id="app">
     <router-view />
   </div>
 </template>
@@ -11,9 +11,24 @@ export default {
 </script>
 
 <style>
+@import url(//db.onlinewebfonts.com/c/66108f52b32320faf592153ea557ef07?family=DIN+Next+LT+Arabic);
 @import "./styles/colors.css";
+@font-face {
+  font-family: "DIN Next LT Arabic";
+  src: url("//db.onlinewebfonts.com/t/66108f52b32320faf592153ea557ef07.eot");
+  src: url("//db.onlinewebfonts.com/t/66108f52b32320faf592153ea557ef07.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/66108f52b32320faf592153ea557ef07.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/66108f52b32320faf592153ea557ef07.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/66108f52b32320faf592153ea557ef07.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/66108f52b32320faf592153ea557ef07.svg#DIN Next LT Arabic")
+      format("svg");
+}
 #app {
-  font-family: Arial, Avenir, Helvetica, sans-serif;
+  font-family: var(--fonts);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-width: 100vh;
