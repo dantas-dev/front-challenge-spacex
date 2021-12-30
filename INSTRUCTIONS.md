@@ -1,9 +1,9 @@
 ## Instruções:
 1. Clonar o projeto do GitHub.
 
-2. Navegar até a pasta raiz do projeto pelo terminal e utilizar o comando `yarn install` ou `npm install`
+2. Navegar até a pasta raiz do projeto pelo terminal e utilizar o comando `yarn install`.
 
-3. Ainda na pasta raiz do projeto utilizar o comando `yarn serve` ou `npm run serve`
+3. Ainda na pasta raiz do projeto utilizar o comando `yarn serve`.
 
 4. Será exibido no terminal o endereço que o sistema web está rodando, basta copiar tal endereço e utilizar em algum navegador web.
 
