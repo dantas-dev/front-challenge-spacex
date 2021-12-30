@@ -28,7 +28,7 @@ export default {
       format("svg");
 }
 #app {
-  font-family: var(--fonts);
+  font-family: DIN Next LT Arabic, Arial, Avenir, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   min-width: 100vh;
